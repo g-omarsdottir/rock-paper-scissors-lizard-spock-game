@@ -1,9 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Importing Google Fonts 
+For general text: font-family: "Work Sans", sans-serif;
+For headings and game buttons: font-family: "Play", sans-serif;
+As backup for all text: font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Working styles. To-do: remove when basic structure is styled */ 
 header {
     background-color: aquamarine;
 }
@@ -16,17 +19,58 @@ footer {
     background-color: yellow;
 }
 
+/* General style rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Play", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* To push footer down and display full website on large screens without scrolling */ 
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Push footer down */
     justify-content: space-between;
-    text-align: center;
+    /* To-do: add when flexbox properties are correctly set: text-align: center;*/
 }
 
-/*.button-box {
+/* Scoreboard displaying current user's and computer's score */
+#user-box {
+    border: 2px groove hotpink;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 80px;
+}
+
+#computer-box {
+    border: 2px groove darkslateblue;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 80px;
+}
+
+/* Interactive game area: choice buttons for user to play game. Responsive on all device sizes due to flexbox wrap */
+.game-box {
     display: flex;
     justify-content: center;
-    align-items: center;
-}*/
+    flex-wrap: wrap;
+}
+
+.choice-button {
+    font-size: 1.5rem;
+    width: 150px;
+    height: 100px;
+    margin: 8px;
+    font-family: "Play", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

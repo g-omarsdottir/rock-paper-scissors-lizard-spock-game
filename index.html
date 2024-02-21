@@ -45,14 +45,27 @@
 
         <!-- Main content -->
         <main>
-            <!-- Choice buttons for playing game -->
-            <div class="button-box">
-                <button>Rock <i class="fa-regular fa-hand-back-fist"></i></button>
-                <button>Paper <i class="fa-regular fa-hand"></i></button>
-                <button>Scissors <i class="fa-regular fa-hand-scissors"></i></button>
-                <button>Lizard <i class="fa-regular fa-hand-lizard"></i></button>
-                <button>Spock <i class="fa-regular fa-hand-spock"></i></button>
+            <!-- Scoreboard displaying user's and computer's score. Scores are updated and displayed on screen using JavaScript -->
+            <div class="game-box">
+                <div id="user-box">
+                    <p>Your score:</p>
+                    <p>0</p>
+                </div>
+                <div id="computer-box">
+                    <p>Computer's score:</p>
+                    <p>0</p>
+                </div>
             </div>
+
+            <!-- Choice buttons to play game -->
+            <div class="game-box">
+                <button class="choice-button">Rock <i class="fa-regular fa-hand-back-fist"></i></button>
+                <button class="choice-button">Paper <i class="fa-regular fa-hand"></i></button>
+                <button class="choice-button">Scissors <i class="fa-regular fa-hand-scissors"></i></button>
+                <button class="choice-button">Lizard <i class="fa-regular fa-hand-lizard"></i></button>
+                <button class="choice-button">Spock <i class="fa-regular fa-hand-spock"></i></button>
+            </div>
+
         </main>
 
         <!-- Footer -->
