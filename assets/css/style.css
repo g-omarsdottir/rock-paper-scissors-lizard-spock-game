@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 header {
     background-color: aquamarine;
 }
@@ -9,3 +15,18 @@ main {
 footer {
     background-color: yellow;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Push footer down */
+    justify-content: space-between;
+    text-align: center;
+}
+
+/*.button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
