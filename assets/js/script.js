@@ -7,6 +7,9 @@ const scissorsVar = document.getElementById("scissors");
 const lizardVar = document.getElementById("lizard");
 const spockVar = document.getElementById("spock");
 
+// Randomly generated computer choice
+let computerChoice = generateComputerChoice();
+
 // Event listeners for choice buttons when clicked
 rockVar.addEventListener("click", function () {
     console.log("You clicked Rock")
@@ -27,3 +30,9 @@ rockVar.addEventListener("click", function () {
   spockVar.addEventListener("click", function () {
     console.log("You clicked Spock")
   });
+
+  // Generate random computer choice
+  function generateComputerChoice() {
+    return choices[Math.floor(Math.random() * choices.length)];
+  }
+  console.log(computerChoice);
