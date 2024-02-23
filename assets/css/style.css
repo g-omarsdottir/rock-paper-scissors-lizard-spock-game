@@ -50,7 +50,7 @@ h1, h2, h3 {
 
 /* Scoreboard displaying current user's and computer's score */
 #score-box {
-background-color: aqua;
+background-color: yellow;
 }
 
 #user-score-box {
@@ -75,8 +75,12 @@ background-color: aqua;
 
 /* Game results area: user and computer choices and result of each round displayed to user */
 
-
-/*#result-box unused - maybe only needed for javascript */ 
+#result-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px auto;
+}
 
 /* Interactive game area: choice buttons for user to play game. Responsive on all device sizes due to flexbox wrap */
 

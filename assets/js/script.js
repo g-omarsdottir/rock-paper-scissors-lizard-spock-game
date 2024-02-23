@@ -4,7 +4,7 @@ const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 // Outcome variables
 const winMessage = "You win! Yay!";
 const tieMessage = "It's a tie! Everybody wins!";
-const loseMessage = "Yaiks, that plan backfired! Better luck next time!";
+const loseMessage = "Yaiks, you lose!";
 
 // Scoreboard variables for functions to increment scores and display updated scores in the DOM
 // Default scores at game start are 0
@@ -13,11 +13,16 @@ let userScoreElement = document.getElementById("user-score");
 let computerScore = 0;
 let computerScoreElement = document.getElementById("computer-score");
  
+// Variables for improved UX - method (document.getElementByID) to retrieve references for elements from the DOM 
+//  for functions to display the updated choices in the DOM.
+// Using let because the choices are dynamic.
+let userChoiceElement = document.getElementById("user-choice");
+let computerChoiceElement = document.getElementById("computer-choice");
+
 // Event listeners for choice-buttons - a method to retrieve references for button elements from the DOM (document.getElementByID) and 
 //  add button references to event listener method (addEventListeners). 
 // When buttons are clicked, the function compareChoices, the game logic, is called.
 // The string for each choice button from the array choices is passed as an argument to the function compareChoices.
-
 document.getElementById("rock").addEventListener("click", function () {
     compareChoices("Rock");
     console.log("You clicked Rock");
@@ -64,28 +69,33 @@ function updateScoreElement(element, score) {
   element.innerHTML = score;
 }
 
-// Functions for actions depending on outcome of compareChoices
+// Function to update the displayed user and computer choices in the DOM
+//  to increase UX
+function updateChoiceElements(userChoiceElement, computerChoiceElement, userChoice, computerChoice) {
+  userChoiceElement.innerHTML = "Your choice: " + userChoice;
+  computerChoiceElement.innerHTML = "Computer choice: " + computerChoice;
+}
+
+// Functions for actions depending on results of compareChoices
 function userWins(userChoice, computerChoice) {
   incrementUserScore();  
-  console.log("Your choice: " + userChoice + " " + winMessage);
-    console.log("Computer's choice: " + computerChoice);
-    console.log("Your score" + userScore);
+  console.log(winMessage);
 }
 
 function userTies(userChoice, computerChoice) {
-    console.log("Your choice: " + userChoice + " " + "Computer's choice: " + computerChoice + " " + tieMessage);
+    console.log(tieMessage);
 }
 
 function userLoses(userChoice, computerChoice) {
     incrementComputerScore();
-  console.log("Your choice: " + userChoice + " " + "Computer's choice: " + " " + computerChoice + " " + loseMessage);
-  console.log("Computer score" + computerScore);
+  console.log(loseMessage);
 }
 
-  // Compare choices: deciding which choice wins
+// Function to compare choices based on game rules
 function compareChoices(userChoice) {
   let computerChoice = generateComputerChoice();
   console.log(computerChoice);
+  updateChoiceElements(userChoiceElement, computerChoiceElement, userChoice, computerChoice);
     if (userChoice === computerChoice) {
         userTies(userChoice, computerChoice);
     } else if (
