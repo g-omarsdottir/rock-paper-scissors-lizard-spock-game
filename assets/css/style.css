@@ -42,29 +42,45 @@ h1, h2, h3 {
     /* To-do: add when flexbox properties are correctly set: text-align: center;*/
 }
 
+.box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /* Scoreboard displaying current user's and computer's score */
-#user-box {
+#score-box {
+background-color: aqua;
+}
+
+#user-score-box {
     border: 2px groove hotpink;
     margin: 10px;
     padding: 10px;
     width: 200px;
     height: 80px;
+    display: flex;
+    flex-direction: column;
 }
 
-#computer-box {
+#computer-score-box {
     border: 2px groove darkslateblue;
     margin: 10px;
     padding: 10px;
     width: 200px;
     height: 80px;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Game results area: user and computer choices and result of each round displayed to user */
+
+
+/*#result-box unused - maybe only needed for javascript */ 
+
 /* Interactive game area: choice buttons for user to play game. Responsive on all device sizes due to flexbox wrap */
-.game-box {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+
+/*#button-box unused - probably needed for media quiries */
 
 .choice-button {
     font-size: 1.5rem;
