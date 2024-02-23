@@ -1,20 +1,12 @@
 // Choice buttons array
 const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 
-// Randomly generated computer choice
-let computerChoice = generateComputerChoice();
-
 // Outcome variables
 const winMessage = "You win! Yay!";
 const tieMessage = "It's a tie! Everybody wins!";
 const loseMessage = "Yaiks, that plan backfired! Better luck next time!";
 
- // Generate random computer choice
- function generateComputerChoice() {
-    return choices[Math.floor(Math.random() * choices.length)];
-  }
-  console.log(computerChoice);
-
+ 
 // Event listeners for choice-buttons - a method to retrieve references for button elements from the DOM (document.getElementByID) and 
 //  add button references to event listener method (addEventListeners). 
 // When buttons are clicked, the function compareChoices, the game logic, is called.
@@ -45,6 +37,24 @@ document.getElementById("rock").addEventListener("click", function () {
     console.log("You clicked Spock");
   });
 
+// Generate random computer choice
+function generateComputerChoice() {
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+console.log(computerChoice);
+
+// Functions to increment scores
+function incrementUserScore() {
+  userScore++;
+  getUserScore.innerHTML = userScore;
+}
+
+function incrementComputerScore() {
+  computerScore++;
+  getComputerScore.innerHTML = computerScore;
+}
+
+// Functions for actions depending on outcome of compareChoices
 function userWins(userChoice, computerChoice) {
     console.log("Your choice: " + userChoice + " " + winMessage);
     console.log("Computer's choice: " + computerChoice);
@@ -60,7 +70,7 @@ function userLoses(userChoice, computerChoice) {
 
   // Compare choices: deciding which choice wins
 function compareChoices(userChoice, computerChoice) {
-    computerChoice = generateComputerChoice();
+  let computerChoice = generateComputerChoice();
     if (userChoice === computerChoice) {
         userTies(userChoice, computerChoice);
     } else if (
