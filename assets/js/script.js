@@ -13,11 +13,13 @@ let userScoreElement = document.getElementById("user-score");
 let computerScore = 0;
 let computerScoreElement = document.getElementById("computer-score");
  
-// Variables for improved UX - method (document.getElementByID) to retrieve references for elements from the DOM 
-//  for functions to display the updated choices in the DOM.
-// Using let because the choices are dynamic.
+// Variables for user feedback to game status to improve UX.
+// Apply method (document.getElementByID) to retrieve references for elements from the DOM 
+//  for functions to update the displayed variables in the DOM.
+// Using let because the choices and results are dynamic.
 let userChoiceElement = document.getElementById("user-choice");
 let computerChoiceElement = document.getElementById("computer-choice");
+let resultElement = document.getElementById("result");
 
 // Event listeners for choice-buttons - a method to retrieve references for button elements from the DOM (document.getElementByID) and 
 //  add button references to event listener method (addEventListeners). 
@@ -64,30 +66,37 @@ function incrementComputerScore() {
   updateScoreElement(computerScoreElement, computerScore);
 }
 
-// Function to display incremented, i.e. updated, scores in the DOM
+// Function to update the displayed score in the DOM.
 function updateScoreElement(element, score) {
   element.innerHTML = score;
 }
 
-// Function to update the displayed user and computer choices in the DOM
-//  to increase UX
+// Function to update the displayed user and computer choices in the DOM.
 function updateChoiceElements(userChoiceElement, computerChoiceElement, userChoice, computerChoice) {
   userChoiceElement.innerHTML = "Your choice: " + userChoice;
   computerChoiceElement.innerHTML = "Computer choice: " + computerChoice;
 }
 
+// Function to update the displayed game result (win, lose, tie) in the DOM.
+function updateResultElement(resultElement, result) {
+  resultElement.innerHTML = result;
+}
+
 // Functions for actions depending on results of compareChoices
-function userWins(userChoice, computerChoice) {
+function userWins() {
   incrementUserScore();  
+  updateResultElement(result, winMessage);
   console.log(winMessage);
 }
 
-function userTies(userChoice, computerChoice) {
+function userTies() {
+  updateResultElement(result, tieMessage);
     console.log(tieMessage);
 }
 
-function userLoses(userChoice, computerChoice) {
+function userLoses() {
     incrementComputerScore();
+    updateResultElement(result, loseMessage);
   console.log(loseMessage);
 }
 
