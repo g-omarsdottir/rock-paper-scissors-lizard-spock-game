@@ -1,11 +1,5 @@
-// Choice buttons variables
+// Choice buttons array
 const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-// Variables for adding event listeners to choice buttons when clicked
-const rockVar = document.getElementById("rock");
-const paperVar = document.getElementById("paper");
-const scissorsVar = document.getElementById("scissors");
-const lizardVar = document.getElementById("lizard");
-const spockVar = document.getElementById("spock");
 
 // Randomly generated computer choice
 let computerChoice = generateComputerChoice();
@@ -21,29 +15,33 @@ const loseMessage = "Yaiks, that plan backfired! Better luck next time!";
   }
   console.log(computerChoice);
 
-// Event listeners for choice buttons when clicked
-rockVar.addEventListener("click", function () {
-    compareChoices(choices[0]);
+// Event listeners for choice-buttons - a method to retrieve references for button elements from the DOM (document.getElementByID) and 
+//  add button references to event listener method (addEventListeners). 
+// When buttons are clicked, the function compareChoices, the game logic, is called.
+// The string for each choice button from the array choices is passed as an argument to the function compareChoices.
+
+document.getElementById("rock").addEventListener("click", function () {
+    compareChoices("Rock");
     console.log("You clicked Rock");
   });
   
-  paperVar.addEventListener("click", function () {
-    compareChoices(choices[1]);
+  document.getElementById("paper").addEventListener("click", function () {
+    compareChoices("Paper");
     console.log("You clicked Paper");
   });
   
-  scissorsVar.addEventListener("click", function () {
-    compareChoices(choices[2]);
+  document.getElementById("scissors").addEventListener("click", function () {
+    compareChoices("Scissors");
     console.log("You clicked Scissors");
   });
   
-  lizardVar.addEventListener("click", function () {
-    compareChoices(choices[3]);
+  document.getElementById("lizard").addEventListener("click", function () {
+    compareChoices("Lizard");
     console.log("You clicked Lizard");
   });
   
-  spockVar.addEventListener("click", function () {
-    compareChoices(choices[4]);
+  document.getElementById("spock").addEventListener("click", function () {
+    compareChoices("Spock");
     console.log("You clicked Spock");
   });
 
