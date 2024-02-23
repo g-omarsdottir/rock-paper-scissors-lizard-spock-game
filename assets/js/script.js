@@ -6,6 +6,12 @@ const winMessage = "You win! Yay!";
 const tieMessage = "It's a tie! Everybody wins!";
 const loseMessage = "Yaiks, that plan backfired! Better luck next time!";
 
+// Scoreboard variables for functions to increment scores and display updated scores in the DOM
+// Default scores at game start are 0
+let userScore = 0;
+let userScoreElement = document.getElementById("user-score");
+let computerScore = 0;
+let computerScoreElement = document.getElementById("computer-score");
  
 // Event listeners for choice-buttons - a method to retrieve references for button elements from the DOM (document.getElementByID) and 
 //  add button references to event listener method (addEventListeners). 
@@ -41,36 +47,45 @@ document.getElementById("rock").addEventListener("click", function () {
 function generateComputerChoice() {
   return choices[Math.floor(Math.random() * choices.length)];
 }
-console.log(computerChoice);
 
 // Functions to increment scores
 function incrementUserScore() {
   userScore++;
-  getUserScore.innerHTML = userScore;
+  updateScoreElement(userScoreElement, userScore);
 }
 
 function incrementComputerScore() {
   computerScore++;
-  getComputerScore.innerHTML = computerScore;
+  updateScoreElement(computerScoreElement, computerScore);
+}
+
+// Function to display incremented, i.e. updated, scores in the DOM
+function updateScoreElement(element, score) {
+  element.innerHTML = score;
 }
 
 // Functions for actions depending on outcome of compareChoices
 function userWins(userChoice, computerChoice) {
-    console.log("Your choice: " + userChoice + " " + winMessage);
+  incrementUserScore();  
+  console.log("Your choice: " + userChoice + " " + winMessage);
     console.log("Computer's choice: " + computerChoice);
+    console.log("Your score" + userScore);
 }
 
 function userTies(userChoice, computerChoice) {
-    console.log("Your choice: " + userChoice + " " + "Computer's choice: " + " " + tieMessage);
+    console.log("Your choice: " + userChoice + " " + "Computer's choice: " + computerChoice + " " + tieMessage);
 }
 
 function userLoses(userChoice, computerChoice) {
-    console.log("Your choice: " + userChoice + " " + "Computer's choice: " + " " + computerChoice + " " + loseMessage)
+    incrementComputerScore();
+  console.log("Your choice: " + userChoice + " " + "Computer's choice: " + " " + computerChoice + " " + loseMessage);
+  console.log("Computer score" + computerScore);
 }
 
   // Compare choices: deciding which choice wins
-function compareChoices(userChoice, computerChoice) {
+function compareChoices(userChoice) {
   let computerChoice = generateComputerChoice();
+  console.log(computerChoice);
     if (userChoice === computerChoice) {
         userTies(userChoice, computerChoice);
     } else if (
