@@ -37,42 +37,41 @@
 </head>
 
 <body>
-    
+    <div class="container">
         <!-- Header -->
         <header>
             <h1>Rock, Paper, Scissors, Lizard, Spock - Game</h1>
         </header>
 
         <!-- Main content -->
-        <div class="container">
         <main>
             <!-- Scoreboard displaying user's and computer's score. Scores are updated and updated scores displayed on screen using JavaScript -->
             <div id="score-box" class="box">
-                <div id="user-score-box">
+                <div id="score-box-user">
                     <p>Your score:</p>
                     <p id="user-score">0</p>
                 </div>
-                <div id="computer-score-box">
-                    <p>Computer's score:</p>
+                <div id="score-box-computer">
+                    <p>Computer score:</p>
                     <p id="computer-score">0</p>
                 </div>
             </div>
 
             <!-- Display user and computer choice for improved UX -->
             <div id="result-box" class="box">
-                    <div>
+                    <div id="result-box-user">
                         <p id="user-choice">userChoiceElement</p>
                     </div>
-                    <div>
-                        <p id="result">(This Round) resultElement</p>
-                    </div>
-                    <div>
+                    <div id="result-box-computer">
                         <p id="computer-choice">computerChoiceElement</p>
+                    </div>
+                    <div id="result-box-result">
+                        <p id="result">resultElement</p>
                     </div>
             </div>
 
             <!-- Choice buttons to play game -->
-            <div class="box">
+            <div class="box button-box">
                 <button id="rock" class="choice-button">Rock <i class="fa-regular fa-hand-back-fist"></i></button>
                 <button id="paper" class="choice-button">Paper <i class="fa-regular fa-hand"></i></button>
                 <button id="scissors" class="choice-button">Scissors <i

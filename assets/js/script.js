@@ -27,27 +27,22 @@ let resultElement = document.getElementById("result");
 // The string for each choice button from the array choices is passed as an argument to the function compareChoices.
 document.getElementById("rock").addEventListener("click", function () {
     compareChoices("Rock");
-    console.log("You clicked Rock");
   });
   
   document.getElementById("paper").addEventListener("click", function () {
     compareChoices("Paper");
-    console.log("You clicked Paper");
   });
   
   document.getElementById("scissors").addEventListener("click", function () {
     compareChoices("Scissors");
-    console.log("You clicked Scissors");
   });
   
   document.getElementById("lizard").addEventListener("click", function () {
     compareChoices("Lizard");
-    console.log("You clicked Lizard");
   });
   
   document.getElementById("spock").addEventListener("click", function () {
     compareChoices("Spock");
-    console.log("You clicked Spock");
   });
 
 // Generate random computer choice
@@ -73,8 +68,8 @@ function updateScoreElement(element, score) {
 
 // Function to update the displayed user and computer choices in the DOM.
 function updateChoiceElements(userChoiceElement, computerChoiceElement, userChoice, computerChoice) {
-  userChoiceElement.innerHTML = "Your choice: " + userChoice;
-  computerChoiceElement.innerHTML = "Computer choice: " + computerChoice;
+  userChoiceElement.innerHTML = "Your choice:" + "<br>" + userChoice;
+  computerChoiceElement.innerHTML = "Computer choice:" + "<br>"  + computerChoice;
 }
 
 // Function to update the displayed game result (win, lose, tie) in the DOM.
