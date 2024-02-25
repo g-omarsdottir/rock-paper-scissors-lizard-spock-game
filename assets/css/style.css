@@ -97,3 +97,15 @@ text-align: center;
     white;
 }
 
+#paper {
+    background: url(../images/paper.webp) no-repeat bottom / contain white;
+  }
+
+#scissors {
+    background: url(../images/scissors.webp) no-repeat center / contain
+      white;
+  }
+
+  #lizard {
+    background: url(../images/lizard.webp) no-repeat center / contain white;
+  }
