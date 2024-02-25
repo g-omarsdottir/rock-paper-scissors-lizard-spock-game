@@ -46,26 +46,28 @@ h1, h2, h3 {
 /* Scoreboard displaying current user's and computer's score */
 #score-box {
 background-color: yellow;
+text-align: center;
 }
 
 #user-score-box {
     border: 2px groove hotpink;
-    margin: 10px;
-    padding: 10px;
-    width: 200px;
+    width: fit-content;
+    /*padding: 10px;
+    width: 125px;
     height: 80px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;*/
 }
 
 #computer-score-box {
     border: 2px groove darkslateblue;
-    margin: 10px;
-    padding: 10px;
-    width: 200px;
+    margin-right: 10px;
+    width: fit-content;
+    /*padding: 10px;
+    width: 125px;
     height: 80px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;*/
 }
 
 /* Game results area: user and computer choices and result of each round displayed to user */
@@ -83,9 +85,15 @@ background-color: yellow;
 
 .choice-button {
     font-size: 1.5rem;
-    width: 150px;
-    height: 100px;
-    margin: 8px;
     font-family: "Play", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    width: 140px;
+    height: 100px;
+    margin: 5px;
 }
+
+#rock {
+    background: url(../images/rock.webp) no-repeat bottom / contain
+    white;
+}
+
