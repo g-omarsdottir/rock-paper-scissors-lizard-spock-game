@@ -15,10 +15,6 @@ main {
     background-color: rgb(252, 192, 222);
 }
 
-footer {
-    background-color: yellow;
-}
-
 /* General style rules */
 * {
     margin: 0;
@@ -33,12 +29,11 @@ h1, h2, h3 {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-/* To push footer down and display full website on large screens without scrolling */ 
+/* Display full website on large screens without scrolling */ 
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    justify-content: space-between;
     /* To-do: add when flexbox properties are correctly set: text-align: center;*/
 }
 
