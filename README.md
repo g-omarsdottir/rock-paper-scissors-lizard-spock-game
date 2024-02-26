@@ -68,6 +68,9 @@ The game can also be played in person using hand gestures. The player's count to
 The website is a single page devided tino 3 sections: landing page section, game section, and completion of game section. The sections displayed alternately to the user according to a logical flow of a game website.
 The website was designed first for mobile devices, i.e. smaller screens and the step wise progressed to large mobile devices, tablets, and desktops. Design was targeted and adapted to larger screens by applying CSS media queries. A quick search online gave a rough overview of which screen sizes are popular and which are no longer in use. 
 
+Mobile Device
+The choice buttons for the game variables are placed at the flex-bottom. The user can conveniently reach all buttons using the thumb while securily holding the mobile device in one hand.
+
 ![Layout Map](/documentation/layout-map.png)
 
 ### Wireframes
