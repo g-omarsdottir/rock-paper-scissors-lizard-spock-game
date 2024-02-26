@@ -56,6 +56,21 @@ body {
     flex-wrap: wrap;
 }
 
+/* Username box*/
+.username-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    margin-left: 30%;
+
+}
+
+.username-input {
+    padding: 20px;
+    margin-right: 10px;
+  }
+
 /* Scoreboard displaying current user's and computer's score */
 #score-box {
     background-color: yellow;
@@ -84,7 +99,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
     margin: 20px;
-    height: 200px;
 }
 
 #result-box-user {

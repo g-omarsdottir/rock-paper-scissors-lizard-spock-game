@@ -45,11 +45,39 @@ document.getElementById("rock").addEventListener("click", function () {
     compareChoices("Spock");
   });
 
+  //
+  // Section for collecting username. To-do: place variables with other variables when code successfully completed.
+  //Cache element references for performance
+  const usernameInput = document.getElementById("username-input"); // Represents the raw input (temporary) value of input element (subject to change as user types). For initial validation of allowed character limit. Is passed as argument to function displayUsername to store and display in DOM.
+  const username = document.getElementById("username"); // Stores the validated username for function displayUsername.
+  
+  // Function for DOM display and manage local storage of collected username in DOM.
+  function displayUsername() {
+  localStorage.setItem(username, usernameInput.value); // To store the username in local storage
+  username.innerHTML = localStorage.getItem(username); // To display username in DOM.
+  }
+  
+  // Event listener when user clicks submit username
+  document.getElementById("submit").addEventListener("click", function () {
+    if (usernameInput.value.length > 10) {
+      alert("A bit over the top, don't you think? Try again and use less than 10 characters."); // less than 1 character is handled by required in the html input field for username.
+      return false; // to prevent submission if invalid
+    } 
+    collectUsername();
+  });
+  
+  // Function to trigger the DOM display and storage of the validated username
+  function collectUsername() {
+    displayUsername(); 
+  }
+
+  //
 // Generate random computer choice
 function generateComputerChoice() {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+//
 // Functions to increment scores
 function incrementUserScore() {
   userScore++;
@@ -61,6 +89,7 @@ function incrementComputerScore() {
   updateScoreElement(computerScoreElement, computerScore);
 }
 
+//
 // Function to update the displayed score in the DOM.
 function updateScoreElement(element, score) {
   element.innerHTML = score;
