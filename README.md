@@ -4,7 +4,7 @@ The game Rock, Paper, Scissors, Lizard, Spock, often referred to as the RPSLS-Ga
 
 Two exciting game variables have been added to the game, a *Lizard* and *Spock*. 
 
-The old classic game is often used in real life as a tiebreaker, like flipping a coin, when trivial decisions need to be made. This online game was created just to have fun and since it is played against the computer. Although, one might use the game result as inspirational help with decision making, like choosing between two equally appealing options for dinner.
+This is an easy and enjoyable game that requires no previous knowledge and is played against the computer. The old classic game is often used in real life as a tiebreaker, like flipping a coin, when trivial decisions need to be made. Although the goal here is just to have fun, one might use the game result as inspirational help with decision making, like choosing between two equally appealing options for dinner.
 
 ## Mockup
 
@@ -39,13 +39,27 @@ The game can also be played in person using hand gestures. The player's count to
 
 README content
 ## Project and Site Owner Goals
+The goal is to create an easy and enjoyable game that requires no previous knowledge. Since the game is played against the computer, the user does not require a counterpart and can play whenever and wherever he or she likes.
 
 ## User Experience
 
 ## Target Audience
+People who enjoy playing online games. 
+People who don't have or do not wish to have a counterpart to play with.
+Fans of the sitcom The Big Bang Theory.
+
 ### First Time Visitors Goals
+To play a game for fun.
+To play a familiar game that introduces additional variables and to enjoy learning new things.
+To be able to easily understand and follow rules of the game.
+To get instant positive feedback when playing the game because it doesn't require investing a lot of time to learn rules, to play the game or to plan a game strategy.
+
 ### Returning Visitors Goals
+To have fun playing the game without having to read and understand a lot of rules.
+
 ### Frequent Visitors Goals
+To play a familiar game to pass time in a fun way and/or to clear the head between long working sessions.
+To see if it's possible to create a strategy to win randomly generated play moves of the computer.
 
 ## Design
 ### Imagery
@@ -92,8 +106,23 @@ The wireframes show designs for desktop and mobile devices. The website is respo
 ![End Page Desktop](/documentation/end-page.png)
 
 ## Features
+The website is responsive on all device sizes.
+The user lands on a landing page. After entering a username and submitting it, the user is automatically forwarded to the game section. 
+After completing the game, the user has the option to return to game page to play again. 
+The user does not have the option to navigate between the pages.
+Buttons have the pseudo-class active to give users feedback when a choice button for a game variable is clicked with a box-shadow effect. On desktop screens operated with a mouse, there is also the pseudo-class hover at mouse-over, i.e. when the mouse is hovered over the buttons by a slight change of color.
+
 ### Interactive Elements
+Input element for username. The user cannot move forward to playing game without entering a username. 
+Buttons to choose which variable the user wants to play for each round.
+Return button. After completing the game, the user is presented with a return button to return to the game and play again and is automatically forwarded to the game section.
+to-do:    A link to access the rules again, which open in a new window / OR blend rules in and out when clicked and then return to game button so that the game can resume.
+
 ### General Features of Each Page
+Landing page
+The user is welcomed to the website and encouraged to play the gam.
+The user is invited to enter username, i.e. pseudoname or nickname, of his or her choosing. 
+
 ### Features Left to Implement
 
 ## Accessibility 
