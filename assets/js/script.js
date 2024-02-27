@@ -57,12 +57,12 @@ document.getElementById("rock").addEventListener("click", function () {
   username.innerHTML = localStorage.getItem(username); // To display username in DOM.
   }
   
-  // Event listener when user clicks submit username
+  // Event listener when user clicks submit username and to validate username
   document.getElementById("submit").addEventListener("click", function () {
     if (usernameInput.value.length > 10) {
-      alert("A bit over the top, don't you think? Try again and use less than 10 characters."); // less than 1 character is handled by required in the html input field for username.
+      alert("A bit over the top, don't you think? Please choose a username with less than 10 characters."); // less than 1 character is handled by required in the html input field for username.
       return false; // to prevent submission if invalid
-    } 
+    }
     collectUsername();
   });
   
