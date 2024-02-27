@@ -20,7 +20,7 @@ Each variable can beat or be beaten by two other variables as described below. T
 
 ### Origin of the Game
 
-The RPSLS-Game was originally created by Sam Kass with Karen Brylan, who introduced two further variables into the game: a lizard and the character Spock from the renowned TV series Star Trek. Being familiar with the character Spock is not necessary to be able to play and enjoy the game.
+The RPSLS-Game was originally created by Sam Kass with Karen Brylan, who introduced two further variables into the game: a lizard and the character Spock from the renowned Star Trek media franchise. Being familiar with the character Spock is not necessary to be able to play and enjoy the game.
 
 The game was displayed on the TV sitcom [The Big Bang Theory](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock), after which it gained popularity. 
 
@@ -45,6 +45,7 @@ The game can also be played in person using hand gestures. The player's count to
 - People who enjoy playing online games. 
 - People who don't have or do not wish to have a counterpart to play with.
 - Fans of the sitcom The Big Bang Theory.
+- Fans of the Star Trek franchise.
 
 ### First Time Visitors Goals
 - To play a game for fun.
@@ -210,6 +211,7 @@ To fork the repository:
 
 ## Credits
 ### Content
+- [inclusive-components.design](https://inclusive-components.design/toggle-button/) for css style of a pressed button with 3D effect using box-shadow.
 ### Imagery
 - [Favicon](https://www.freefavicon.com/freefavicons/icons/iconinfo/video-game-controller-icon-152-227918.html)
 - Pixabay: by user [Benjamin Balazs](https://pixabay.com/photos/spock-star-trek-vulcan-1541528/) 
