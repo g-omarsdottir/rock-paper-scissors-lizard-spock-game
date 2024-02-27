@@ -212,6 +212,7 @@ To fork the repository:
 ## Credits
 ### Content
 - [inclusive-components.design](https://inclusive-components.design/toggle-button/) for css style of a pressed button with 3D effect using box-shadow.
+- [timonweb.com](randomly generated computer's choice: https://timonweb.com/javascript/how-to-get-a-random-value-from-a-javascript-array/) for randomly generated computer's choice.
 ### Imagery
 - [Favicon](https://www.freefavicon.com/freefavicons/icons/iconinfo/video-game-controller-icon-152-227918.html)
 - Pixabay: by user [Benjamin Balazs](https://pixabay.com/photos/spock-star-trek-vulcan-1541528/) 
