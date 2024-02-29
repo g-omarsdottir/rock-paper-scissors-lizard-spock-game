@@ -6,6 +6,14 @@ const winMessage = "You win! Yay!";
 const tieMessage = "It's a tie! Everybody wins!";
 const loseMessage = "Yaiks, you lose!";
 
+const winConditions = {
+  Rock: { Scissors: "crushes", Lizard: "crushes" },
+  Paper: { Rock: "covers", Spock: "disproves" },
+  Scissors: { Paper: "cuts", Lizard: "decapitates" },
+  Lizard: { Spock: "poisons", Paper: "eats" },
+  Spock: { Scissors: "smashes", Rock: "vaporizes" }
+};
+
 // Scoreboard variables for functions to increment scores and display updated scores in the DOM
 // Default scores at game start are 0
 let userScore = 0;
@@ -89,7 +97,7 @@ function incrementComputerScore() {
 }
 
 //
-// Function to update the displayed score in the DOM.
+// Function to update the displayed score in the DOM. Using "element" provides flexibility and concise code, updating both user and computer score at once.
 function updateScoreElement(element, score) {
   element.innerHTML = score;
 }
@@ -106,20 +114,24 @@ function updateResultElement(resultElement, result) {
 }
 
 // Functions for actions depending on results of compareChoices
-function userWins() {
+function userWins(userChoice, computerChoice) {
   incrementUserScore();  
-  updateResultElement(result, winMessage);
-  console.log(winMessage);
+  const reason = winConditions[userChoice][computerChoice]; 
+  const resultMessage = userChoice + " " + reason + " " + computerChoice + "!" + "<br>" + " You win!" ;
+  updateResultElement(result, resultMessage);
 }
 
-function userTies() {
-  updateResultElement(result, tieMessage);
+function userTies(userChoice, computerChoice) {
+  const resultMessage = userChoice + " " + "equals" + " " + computerChoice + "!" + "<br>" + "It's a tie! Everybody wins!"
+  updateResultElement(result, resultMessage);
     console.log(tieMessage);
 }
 
-function userLoses() {
+function userLoses(userChoice, computerChoice) {
     incrementComputerScore();
-    updateResultElement(result, loseMessage);
+    const reason = winConditions[computerChoice][userChoice]; // Note the switched order
+    const resultMessage = computerChoice + " " + reason + " " + userChoice + "!" + "<br>" + " You lose!";
+    updateResultElement(result, resultMessage);
   console.log(loseMessage);
 }
 
