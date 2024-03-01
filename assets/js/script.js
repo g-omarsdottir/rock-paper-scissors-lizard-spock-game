@@ -51,8 +51,8 @@ document.getElementById("rock").addEventListener("click", function () {
   //
   // Section for collecting username. To-do: place variables with other variables when code successfully completed.
   //Cache element references for performance
-  const usernameInput = document.getElementById("username-input"); // Represents the raw input (temporary) value of input element (subject to change as user types). For initial validation of allowed character limit. Is passed as argument to function displayUsername to store and display in DOM.
-  const username = document.getElementById("username"); // Stores the validated username for function displayUsername.
+  let usernameInput = document.getElementById("username-input"); // Represents the raw input (temporary) value of input element (subject to change as user types). For initial validation of allowed character limit. Is passed as argument to function displayUsername to store and display in DOM.
+  let username = document.getElementById("username"); // Stores the validated username for function displayUsername.
   
   // Event listener when user clicks button "submit username". To validate username and to trigger the DOM display and storage of the validated username.
   document.getElementById("submit").addEventListener("click", function () {
@@ -60,12 +60,13 @@ document.getElementById("rock").addEventListener("click", function () {
       alert("A bit over the top, don't you think? Please choose a username with less than 10 characters.");
       return false; // to prevent submission if username is invalid (more than 10 characters)
       // less than 1 character is handled with the required attribute in the html input field for username.
-    }
-    displayUsername();
+    } else {
+    collectUsername();
+  }
   });
 
 // Function for DOM display and manage local storage of collected username in DOM.
-function displayUsername() {
+function collectUsername() {
   localStorage.setItem(username, usernameInput.value); // To store the username in local storage
   username.innerHTML = localStorage.getItem(username); // To display username in DOM.
   }
