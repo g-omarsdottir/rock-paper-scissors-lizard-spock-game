@@ -53,7 +53,8 @@ document.getElementById("rock").addEventListener("click", function () {
   //Cache element references for performance
   let usernameInput = document.getElementById("username-input"); // Represents the raw input (temporary) value of input element (subject to change as user types). For initial validation of allowed character limit. Is passed as argument to function displayUsername to store and display in DOM.
   let username = document.getElementById("username"); // Stores the validated username for function displayUsername.
-  
+  username.textContent = localStorage.getItem(username); // To display the most recent stored value of username in DOM. To-do: move in function to display message at game completion.
+
   // Event listener when user clicks button "submit username". To validate username and to trigger the DOM display and storage of the validated username.
   document.getElementById("submit").addEventListener("click", function () {
     if (usernameInput.value.length > 10) {
@@ -68,7 +69,6 @@ document.getElementById("rock").addEventListener("click", function () {
 // Function for DOM display and manage local storage of collected username in DOM.
 function collectUsername() {
   localStorage.setItem(username, usernameInput.value); // To store the username in local storage
-  username.innerHTML = localStorage.getItem(username); // To display username in DOM.
   }
 
 // Generate random computer choice
