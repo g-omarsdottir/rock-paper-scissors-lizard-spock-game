@@ -107,28 +107,25 @@ function updateResultElement(resultElement, result) {
 function userWins(userChoice, computerChoice) {
   incrementUserScore();  
   const reason = winConditions[userChoice][computerChoice]; 
-  const resultMessage = userChoice + " " + reason + " " + computerChoice + "!" + "<br>" + " You win!" ;
-  updateResultElement(result, resultMessage);
+  const resultMessageWins = userChoice + " " + reason + " " + computerChoice + "!" + "<br>" + " You win!" ;
+  updateResultElement(result, resultMessageWins);
 }
 
 function userTies(userChoice, computerChoice) {
-  const resultMessage = userChoice + " " + "equals" + " " + computerChoice + "!" + "<br>" + "It's a tie! Everybody wins!"
-  updateResultElement(result, resultMessage);
-    console.log(tieMessage);
+  const resultMessageTies = userChoice + " " + "equals" + " " + computerChoice + "!" + "<br>" + "It's a tie! Everybody wins!"
+  updateResultElement(result, resultMessageTies);
 }
 
 function userLoses(userChoice, computerChoice) {
     incrementComputerScore();
     const reason = winConditions[computerChoice][userChoice]; // Note the switched order
-    const resultMessage = computerChoice + " " + reason + " " + userChoice + "!" + "<br>" + " You lose!";
-    updateResultElement(result, resultMessage);
-  console.log(loseMessage);
+    const resultMessageLoses = computerChoice + " " + reason + " " + userChoice + "!" + "<br>" + " You lose!";
+    updateResultElement(result, resultMessageLoses);
 }
 
 // Function to compare choices based on game rules
 function compareChoices(userChoice) {
   let computerChoice = generateComputerChoice();
-  console.log(computerChoice);
   updateChoiceElements(userChoiceElement, computerChoiceElement, userChoice, computerChoice);
     if (userChoice === computerChoice) {
         userTies(userChoice, computerChoice);
