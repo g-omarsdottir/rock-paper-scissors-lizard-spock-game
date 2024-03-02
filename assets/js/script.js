@@ -65,7 +65,6 @@ document.getElementById("rock").addEventListener("click", function () {
 
   // Event listener when user clicks button "submit username". To validate username and to trigger the DOM display and storage of the validated username.
   document.getElementById("submit").addEventListener("click", function () {
-    console.log("submit username and play is clicked 1");
     if (usernameInput.value.length > 10 || usernameInput.value.length < 1) {
       alert("Please choose a username between 1 and 10 characters.");
       return false; // to prevent submission if username is invalid (more than 10 characters)
@@ -74,7 +73,6 @@ document.getElementById("rock").addEventListener("click", function () {
     collectUsername();
     playGame();
   }
-  console.log("submit username and play is clicked");
   });
 
 // Function for DOM display and manage local storage of collected username in DOM.

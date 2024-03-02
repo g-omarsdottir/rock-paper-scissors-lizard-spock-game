@@ -46,7 +46,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 15px 20px;
+    margin: 15px auto;
     text-align: center;
     justify-content: space-between;
 }
@@ -58,10 +58,13 @@ body {
 }
 
 /* Landing page section */
+#landing-section {
+    margin: auto 20px;
+}
+
 #landing-section p {
     text-align: left;
     margin-bottom: 10px;
-
 }
 
 #rules > ul {
@@ -72,18 +75,40 @@ body {
 }
 
 /* Username box*/
-form > button {
-    width: 150px;
-    margin-left: 5px;
-    margin-bottom: 5px;
-    padding: 5px auto;
-}
-
-.username-box {
+#username-box {
     display: flex;
     flex-direction: row;
     text-align: right;
     flex-wrap: wrap;
+    border: 2px groove #7B8246;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+#username-input {
+    width: 160px;
+    line-height: 1.5;
+    font-size: 1em;
+}
+
+#submit {
+    width: 160px;
+    margin: 5px auto;
+    padding: 20px auto;
+    background: rgba(217, 238, 62, 0.719);
+    border: 2px solid #060a39;
+    border-radius: 5px;
+    line-height: 1.5;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#submit:active {
+    position: relative;
+    top: -0.1rem;
+    left: -0.1rem;
+    /* Explanation of values: distance of shadow from element - blur/spread of shadow - no additional spread - color. Same for definition of second shadow*/
+    box-shadow: 0.1em 0.1em 0 #fff, 0.2em 0.2em #060a39;
 }
 
 /* Scoreboard displaying current user's and computer's score */
