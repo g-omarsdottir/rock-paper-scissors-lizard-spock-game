@@ -57,7 +57,6 @@ document.getElementById("rock").addEventListener("click", function () {
     compareChoices("Spock");
   });
 
-  //
   // Section for collecting username. To-do: place variables with other variables when code successfully completed.
   //Cache element references for performance
   let usernameInput = document.getElementById("username-input"); // Represents the raw input (temporary) value of input element (subject to change as user types). For initial validation of allowed character limit. Is passed as argument to function displayUsername to store and display in DOM.
@@ -67,8 +66,8 @@ document.getElementById("rock").addEventListener("click", function () {
   // Event listener when user clicks button "submit username". To validate username and to trigger the DOM display and storage of the validated username.
   document.getElementById("submit").addEventListener("click", function () {
     console.log("submit username and play is clicked 1");
-    if (usernameInput.value.length > 10) {
-      alert("A bit over the top, don't you think? Please choose a username with less than 10 characters.");
+    if (usernameInput.value.length > 10 || usernameInput.value.length < 1) {
+      alert("Please choose a username between 1 and 10 characters.");
       return false; // to prevent submission if username is invalid (more than 10 characters)
       // less than 1 character is handled with the required attribute in the html input field for username.
     } else {
