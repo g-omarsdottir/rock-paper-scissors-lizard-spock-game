@@ -25,6 +25,7 @@ h2,
 h3 {
     font-family: "Play", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        margin: 20px auto;
 }
 
 h1 {
@@ -45,7 +46,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 15px auto;
+    margin: 15px 20px;
     text-align: center;
     justify-content: space-between;
 }
@@ -56,8 +57,22 @@ body {
     flex-wrap: wrap;
 }
 
+/* Landing page section */
+#landing-section p {
+    text-align: left;
+    margin-bottom: 10px;
+
+}
+
+#rules > ul {
+    margin-left: 40px;
+    list-style: circle;
+    text-align: left;
+    line-height: 1.5;
+}
+
 /* Username box*/
-form > input {
+form > button {
     width: 150px;
     margin-left: 5px;
     margin-bottom: 5px;
