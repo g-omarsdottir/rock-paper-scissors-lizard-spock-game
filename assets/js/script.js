@@ -32,7 +32,6 @@ const completedSection = document.getElementById("completed-section");
 gameSection.style.display = "none";
 completedSection.style.display = "none";
 
-
 // Event listeners for choice-buttons - a method to retrieve references for button elements from the DOM (document.getElementByID) and 
 //  add button references to event listener method (addEventListeners). 
 // When buttons are clicked, the function compareChoices, the game logic, is called.
@@ -71,7 +70,9 @@ document.getElementById("rock").addEventListener("click", function () {
       // less than 1 character is handled with the required attribute in the html input field for username.
     } else {
     collectUsername();
-    playGame();
+    setTimeout(() => {
+      playGame();
+    }, 500);
   }
   });
 
