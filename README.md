@@ -233,4 +233,3 @@ To fork the repository:
     - [kraaft](https://www.freeimages.com/photo/pebble-series-1-1517634)
     - [createsime](https://www.freeimages.com/photo/old-paper-1191767)
     - [PhotoObjects.net](https://www.freeimages.com/photo/stainless-steel-scissors-1940007)
-    - [Game Rules depicted in this README](Image: https://en.wikipedia.org/wiki/File:Rock_paper_scissors_lizard_spock.png)
