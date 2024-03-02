@@ -148,11 +148,11 @@ to-do:    A link to access the rules again, which open in a new window / OR blen
 - [Gitpod](https://www.gitpod.io/) as a Cloud Development Environment (CDE).
 - [Google Chrome developer tools](https://developer.chrome.com/docs/devtools) to analize code, identify possible issues, temporarily edit code and test responsiveness on various sizes.
 - [JSFiddle](https://jsfiddle.net/) to create and test JavaScript functions without affecting the actual code.
-- [Code Institue template for this README](https://github.com/Code-Institute-Org/gitpod-full-template)
-- [Google AI language model](https://gemini.google.com/app) to explain lines of code in detail and partly identify issues.
-- [Google Fonts](https://fonts.google.com/)
-- [Fontawesome](https://fontawesome.com/)
-- Am I Responsive for mockup for this README
+- [Code Institue template](https://github.com/Code-Institute-Org/gitpod-full-template) for Gitpod and this README.
+- [Google AI language model](https://gemini.google.com/app) to find references for troubleshooting.
+- [Google Fonts](https://fonts.google.com/).
+- [Fontawesome](https://fontawesome.com/).
+- Am I Responsive for mockup for this README.
 - http://www.responsinator.com/ to show the website layout on various devices for this README.
 
 - [Canva](Canva.com) to edit images for the website and this README
@@ -174,6 +174,14 @@ to-do:    A link to access the rules again, which open in a new window / OR blen
 ## Bugs
 ### Known Bugs
 ### Resolved Bugs
+
+| Bug                                                         | Description                                                                                                                                                                                                                                                                                                         | Solution Applied                                                                                                                                                                                                          | Result |
+|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|
+| Submit username and enter game section.                     | Website was refreshed but game section was not displayed. <br> Username was not validated ([submission triggered before Javascript could process](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)).                                                                                               | <br> Changed input type=”submit” to a button with attribute type=button to submit the form using JavaScript to manage form submission and store username in local storage since no other form action is needed.           | Solved |
+| HTML input attribute required was not consistently applied. | Form submission handled with JavaScript occasionally processed before attribute applied and a username consisting of less than one character was submitted.                                                                                                                                                         | Added an OR statement to JavaScript validation of username in addition to validation by HTML required to handle all cases.                                                                                                | Solved |
+| Retrieving username from local storage.                     | Username value was stored but not retrievable (neither displayed on website nor on console in Dev Tools). <br> Variables to store object (method setItem) and retrieve  i.e. read (method getItem) the username value were re-declared within a function. <br> Variable for stored username was a constant (const). | Moved variable with method getItem and display textContent outside of the function and re-declared it on a global scope. <br> Changed const to let (changeable) to update username value to the most recent stored value. | Solved |
+
+
 Issue: CSS Styles not being displayed on live port despite clearing cache. Common issue using Gitpod.
 Fix: deploy repository to confirm styles were applied. (Possibly switch to local dev.)
 
@@ -184,7 +192,7 @@ The website was deployed using GitHub pages.
 
 #### Deployment using GitHub pages
 To deploy the repository:
-- Log into GitHub and navigate to repository [of this game project](https://github.com/g-omarsdottir/rock-paper-scissors-lizard-spock-game).
+- Log into GitHub and navigate to the [repository of this project](https://github.com/g-omarsdottir/rock-paper-scissors-lizard-spock-game).
 - Navigate to settings of the repository on the top navigation menu.
 - Navigate to Pages on the left sidebar navigation menu.
 - In the section "Build and deployment”, go to Source and select "Deploy from a branch" from the navigation dropdown menu.
@@ -196,7 +204,7 @@ To deploy the repository:
 
 #### Local Clone
 To clone the repository:
-- Log in to GitHub and navigate to repository [of this game project](https://github.com/g-omarsdottir/rock-paper-scissors-lizard-spock-game).
+- Log in to GitHub and navigate to the [repository of this project](https://github.com/g-omarsdottir/rock-paper-scissors-lizard-spock-game).
 - Click on the green "Code" button to open dropdown menu, select "Clone with HTTPS, SSH or GitHub CLI" and copy the link provided.
 - Open "Terminal" (or "Git Bash") in your code editor.
 - Change the current working directory to the location where you want the cloned directory to be made.
@@ -206,11 +214,14 @@ To clone the repository:
 #### Fork
 To fork the repository:
 - Log in (or sign up) to Github.
-- Navigate to the repository [of this game project](https://github.com/g-omarsdottir/rock-paper-scissors-lizard-spock-game).
+- Navigate to the [repository of this project](https://github.com/g-omarsdottir/rock-paper-scissors-lizard-spock-game).
 - Click the "Fork" button in the top right corner to open dropdown menu and select "Create a new fork".
 
 ## Credits
 ### Content
+- [table-magic](https://stevecat.net/table-magic/) to create table for section [Bugs](#resolved-bugs) in this README.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage ) for local storage, i.e. store and retrieve username value.
+- [W3 schools](https://www.w3schools.com/jsref/prop_text_value.asp) for displaying username value in personalized user feedback.
 - [Delay with setTimout()](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) to display the visual feedback of pushing submit and play button for improved UX.  
 - [inclusive-components.design](https://inclusive-components.design/toggle-button/) for css style of a pressed button with 3D effect using box-shadow.
 - [timonweb.com](randomly generated computer's choice: https://timonweb.com/javascript/how-to-get-a-random-value-from-a-javascript-array/) for randomly generated computer's choice.
