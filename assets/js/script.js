@@ -1,6 +1,13 @@
-// Choice buttons array
+// Game variables array, possible choices for playing game
 const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-
+// Variables for user feedback to game status to improve UX.
+// Apply method (document.getElementByID) to retrieve references for elements from the DOM 
+//  for functions to update the displayed variables in the DOM.
+// Using let because the choices and results are dynamic.
+let userChoiceElement = document.getElementById("user-choice");
+let computerChoiceElement = document.getElementById("computer-choice");
+let resultElement = document.getElementById("result");
+// Detailled result feedback referencing game rules. Constant variable because game rules are unchangeable.
 const winConditions = {
   Rock: { Scissors: "crushes", Lizard: "crushes" },
   Paper: { Rock: "covers", Spock: "disproves" },
@@ -16,13 +23,15 @@ let userScoreElement = document.getElementById("user-score");
 let computerScore = 0;
 let computerScoreElement = document.getElementById("computer-score");
  
-// Variables for user feedback to game status to improve UX.
-// Apply method (document.getElementByID) to retrieve references for elements from the DOM 
-//  for functions to update the displayed variables in the DOM.
-// Using let because the choices and results are dynamic.
-let userChoiceElement = document.getElementById("user-choice");
-let computerChoiceElement = document.getElementById("computer-choice");
-let resultElement = document.getElementById("result");
+// Flow of the game: variables for displaying or hiding sections according to logical flow of the game.
+const landingSection = document.getElementById("landing-section");
+const gameSection = document.getElementById("game-section");
+const completedSection = document.getElementById("completed-section");
+
+// Display landing page, hide game section and game completed section as default. Use JavaScript to handle both hiding and displaying for better overview. 
+gameSection.style.display = "none";
+completedSection.style.display = "none";
+
 
 // Event listeners for choice-buttons - a method to retrieve references for button elements from the DOM (document.getElementByID) and 
 //  add button references to event listener method (addEventListeners). 
@@ -57,19 +66,29 @@ document.getElementById("rock").addEventListener("click", function () {
 
   // Event listener when user clicks button "submit username". To validate username and to trigger the DOM display and storage of the validated username.
   document.getElementById("submit").addEventListener("click", function () {
+    console.log("submit username and play is clicked 1");
     if (usernameInput.value.length > 10) {
       alert("A bit over the top, don't you think? Please choose a username with less than 10 characters.");
       return false; // to prevent submission if username is invalid (more than 10 characters)
       // less than 1 character is handled with the required attribute in the html input field for username.
     } else {
     collectUsername();
+    playGame();
   }
+  console.log("submit username and play is clicked");
   });
 
 // Function for DOM display and manage local storage of collected username in DOM.
 function collectUsername() {
   localStorage.setItem(username, usernameInput.value); // To store the username in local storage
   }
+
+function playGame(){
+  landingSection.style.display = "none";
+  gameSection.style.display = "block";
+  completedSection.style.display = "none";
+  console.log("play game function activated");
+}
 
 // Generate random computer choice
 function generateComputerChoice() {

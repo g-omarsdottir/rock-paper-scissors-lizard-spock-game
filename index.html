@@ -45,57 +45,71 @@
 
         <!-- Main content -->
         <main>
-            <!-- Scoreboard displaying user's and computer's score. Scores are updated and updated scores displayed on screen using JavaScript -->
-            <div id="score-box" class="box">
-                <div id="score-box-user">
-                    <p>Your score:</p>
-                    <p id="user-score">0</p>
+            <!-- Landing page section -->
+            <div id="landing-section">
+                <h2>Landing page section</h2>
+
+                <!-- USERNAME -->
+                <div>
+                    <p id="username">username</p>
                 </div>
-                <div id="score-box-computer">
-                    <p>Computer score:</p>
-                    <p id="computer-score">0</p>
+                <div class="box">
+                    <div class="username-box">
+                        <form>
+                            <label for="username-input">Username: </label>
+                            <input type="text" placeholder="Enter Username" name="username" id="username-input"
+                                required>
+                            <br>
+                            <input type="submit" id="submit" class="submit-button" value="Submit & Play Game">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Game section -->
+            <div id="game-section">
+                <!-- Scoreboard displaying user's and computer's score. Scores are updated and updated scores displayed on screen using JavaScript -->
+                <div id="score-box" class="box">
+                    <div id="score-box-user">
+                        <p>Your score:</p>
+                        <p id="user-score">0</p>
+                    </div>
+                    <div id="score-box-computer">
+                        <p>Computer score:</p>
+                        <p id="computer-score">0</p>
+                    </div>
+                </div>
+
+                <!-- Display user and computer choice -->
+                <div id="result-box" class="box">
+                    <div id="result-box-user">
+                        <p id="user-choice">userChoice</p>
+                    </div>
+                    <div id="result-box-computer">
+                        <p id="computer-choice">computerChoice</p>
+                    </div>
+                    <div id="result-box-result">
+                        <p id="result">resultElement</p>
+                    </div>
+                </div>
+
+                <!-- Choice buttons to play game to-do: maybe add hidden text for screenreaders only when javascript game logic completed -->
+                <div class="box button-box">
+                    <button id="rock" class="choice-button"><span>Rock</span> <i
+                            class="fa-regular fa-hand-back-fist"></i></button>
+                    <button id="paper" class="choice-button"><span>Paper</span> <i
+                            class="fa-regular fa-hand"></i></button>
+                    <button id="scissors" class="choice-button"><span>Scissors</span> <i
+                            class="fa-regular fa-hand-scissors"></i></button>
+                    <button id="lizard" class="choice-button"><span>Lizard</span> <i
+                            class="fa-regular fa-hand-lizard"></i></button>
+                    <button id="spock" class="choice-button"><span>Spock</span> <i
+                            class="fa-regular fa-hand-spock"></i></button>
                 </div>
             </div>
 
-            <!-- USERNAME -->
-            <div>
-                <p id="username">username</p>
-            </div>
-            <div class="box">
-                <div class="username-box">
-                    <form>
-                    <label for="username-input">Username: </label>
-                    <input type="text" placeholder="Enter Username" name="username" id="username-input" required>
-                    <br>
-                    <input type="submit" id="submit" class="submit-button" value="Submit & Play Game">
-                </form>
-                </div>
-            </div>
-
-            <!-- Display user and computer choice for improved UX -->
-            <div id="result-box" class="box">
-                <div id="result-box-user">
-                    <p id="user-choice">userChoice</p>
-                </div>
-                <div id="result-box-computer">
-                    <p id="computer-choice">computerChoice</p>
-                </div>
-                <div id="result-box-result">
-                    <p id="result">resultElement</p>
-                </div>
-            </div>
-
-            <!-- Choice buttons to play game to-do: maybe add hidden text for screenreaders only when javascript game logic completed -->
-            <div class="box button-box">
-                <button id="rock" class="choice-button"><span>Rock</span> <i
-                        class="fa-regular fa-hand-back-fist"></i></button>
-                <button id="paper" class="choice-button"><span>Paper</span> <i class="fa-regular fa-hand"></i></button>
-                <button id="scissors" class="choice-button"><span>Scissors</span> <i
-                        class="fa-regular fa-hand-scissors"></i></button>
-                <button id="lizard" class="choice-button"><span>Lizard</span> <i
-                        class="fa-regular fa-hand-lizard"></i></button>
-                <button id="spock" class="choice-button"><span>Spock</span> <i
-                        class="fa-regular fa-hand-spock"></i></button>
+            <!-- Game completed section -->
+            <div id="completed-section">
+                <h2>Game completed section</h2>
             </div>
     </div>
     </main>
