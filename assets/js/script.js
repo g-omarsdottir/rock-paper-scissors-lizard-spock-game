@@ -84,6 +84,8 @@ usernameForm.addEventListener("submit", function (event) {
   event.preventDefault();
   if (usernameInput.value.length > 10 || usernameInput.value.length < 1) {
     alert("Please choose a username between 1 and 10 characters.");
+    // Clear form input field if username is invalid
+    usernameInput.value = "";
     return false; // to prevent submission if username is invalid (more than 10 characters)
     // less than 1 character is handled with the required attribute in the html input field for username.
   } else {
