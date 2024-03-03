@@ -74,6 +74,11 @@ body {
     line-height: 1.5;
 }
 
+#rules-img {
+    width: 100%;
+    margin: 40px auto;
+}
+
 /* Username box*/
 #username-box {
     display: flex;
@@ -213,12 +218,16 @@ body {
 }
 
 /* Media query: screens ≥ 375px (larger mobile devices) */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 375px) {
     .choice-button {
         width: 160px;
         height: 160px;
         margin: 20px;
         padding-top: 20px;
+    }
+
+    #rules-img {
+        width: 80%;
     }
 }
 
@@ -228,7 +237,11 @@ body {
         font-size: 1.7rem;
     }
 
-    .username-box {
+    #rules-img {
+        width: 50%;
+    }
+
+    #username-box {
         display: flex;
         flex-direction: row;
         justify-content: center;
