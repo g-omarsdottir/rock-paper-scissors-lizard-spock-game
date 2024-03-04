@@ -126,7 +126,8 @@ button:active {
 
 #user-box {
     width: 150px;
-    border: 2px groove hotpink;
+    border: 2px groove rgba(217, 238, 62);
+    box-shadow: 0 3px 3px rgba(186, 196, 106, 0.795);
     border-radius: 10px;
     margin-right: 9px;
     padding: 4px 0;
@@ -134,8 +135,9 @@ button:active {
 }
 
 #computer-box {
-    border: 2px groove darkslateblue;
     width: 150px;
+    border: 2px groove #2b547e91;
+    box-shadow: 0 3px 3px #2b547e54;
     border-radius: 10px;
     padding: 4px 0;
     font-size: 0.8em;
