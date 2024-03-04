@@ -1,8 +1,7 @@
-// Variables for landing page: Cache element references for collecting username.
-let usernameInput = document.getElementById("username-input"); // Represents the raw input (temporary) value of input element (subject to change as user types). For initial validation of allowed character limit. Is passed as argument to function displayUsername to store and display in DOM.
-let username = document.getElementById("username"); // Stores the validated username for function displayUsername.
-username.textContent = localStorage.getItem(username); // To display the most recent stored value of username in DOM. To-do: move in function to display message at game completion.
-let usernameForm = document.getElementById("username-form"); // As reference of submission form for event listener "submit" (for validation and trigger local storage of username).
+// Variables for landing page: to collect username at form submission and store in local storage.
+let usernameInput = document.getElementById("username-input"); // Reference for validation of username. 
+let username = document.getElementById("username");
+let usernameForm = document.getElementById("username-form"); // Reference of submission form for event listener "submit".
 
 // Variables for game section: Game variables array, possible choices for playing game.
 const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
@@ -77,26 +76,26 @@ document.getElementById("spock").addEventListener("click", function () {
   compareChoices("Spock");
 });
 
-// Event listener when user clicks button "submit username". To validate username, trigger local storage of the validated username and playGame function.
+// Event listener when user clicks button "submit username". Triggers function to validate username. 
 usernameForm.addEventListener("submit", function (event) {
   // Prevents the default submission of form before JavaScript can handle the username submission, while allowing submit button to be focusable using type="submit".
   event.preventDefault();
   if (usernameInput.value.length > 10 || usernameInput.value.length < 1) {
     alert("Please choose a username between 1 and 10 characters.");
     usernameInput.value = "";  // Clear form input field if username is invalid
-    return false; // to prevent submission if username is invalid (less than one or more than 10 characters)
+    return false; // to prevent submission if username is invalid (less than one or more than 10 characters).
     // less than 1 character is handled with the required attribute in the html input field for username.
   } else {
-    collectUsername();
+    collectUsername(); // If username is valid, triggers local storage
     setTimeout(() => {
-      playGame();
+      playGame(); // If username is valid, triggers display of game section
     }, 500);
   }
 });
 
-// Function for DOM display and manage local storage of collected username in DOM.
+// Function to collect username and and store in local storage.
 function collectUsername() {
-  localStorage.setItem(username, usernameInput.value); // To store the username in local storage
+  localStorage.setItem(username, usernameInput.value); // To store the username in local storage.
 }
 
 // Display game section (user sees buttons and can play game) and hide the landing page section and game completed section for a logical flow of the website/game.
@@ -115,17 +114,22 @@ function generateComputerChoice() {
 // Functions to increment scores
 function incrementUserScore() {
   userScore++;
-  updateScoreElement(userScoreElement, userScore);
+  handleScores(userScoreElement, userScore);
 }
 
 function incrementComputerScore() {
   computerScore++;
-  updateScoreElement(computerScoreElement, computerScore);
+  handleScores(computerScoreElement, computerScore);
 }
 
 // Function to update the displayed score in the DOM. Using "element" provides flexibility and concise code, updating both user and computer score at once.
-function updateScoreElement(element, score) {
+function handleScores(element, score) {
   element.innerHTML = score;
+  if (score === 10) {
+    setTimeout(() => {
+      completedGame();
+      }, 300);
+  }
 }
 
 // Function to update the displayed user and computer choices in the DOM for user feedback.
@@ -181,4 +185,17 @@ function compareChoices(userChoice) {
   } else {
     userLoses(userChoice, computerChoice);
   }
+}
+
+function completedGame() {
+  landingSection.style.display = "none";
+  gameSection.style.display = "none";
+  completedSection.style.display = "block";
+if (userScore === 10) {
+  finalUserScore.innerHTML = "Your score: " + userScore;
+  finalResultMessage.innerHTML = "Congratulations, " + localStorage.getItem(username) + ", you win!"
+} else {
+  finalUserScore.innerHTML = "Your score: " + userScore;
+  finalResultMessage.innerHTML = "Too bad, " + localStorage.getItem(username) + ", you lost this time around." + "<br>" + "Better luck next time!"
+}
 }
