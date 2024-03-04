@@ -185,6 +185,9 @@ to-do:    A link to access the rules again, which open in a new window / OR blen
 - [Canva](Canva.com) to edit images for the website and this README.
 - [Balsamiq](https://balsamiq.com/wireframes/desktop/) to create wireframes and layout map of the website for this README.
 - [Pixelied](https://pixelied.com/convert/jpg-converter/jpg-to-webp) to convert images from PNG to WEBP format.
+- [ArtyClick](https://colors.artyclick.com/color-name-finder/) to detect colors from images for color palette.
+- [Coolors](https://coolors.co/) contrast checker.
+- [iColorpalette](https://icolorpalette.com/) to create color palette.
 
 ## Testing
 ### Validator Testing
