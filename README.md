@@ -62,7 +62,33 @@ The game can also be played in person using hand gestures. The player's count to
 
 ## Design
 ### Imagery
-### Colors
+### Color Scheme 
+- The following color palette displays the colors used for this website. The colors were detected from the lizard and the Spock image used as choice buttons background.
+
+    ![Color-palette](/documentation/colors.png)
+
+- #F9F5C6 as background color. The color is easy on the eyes while ensuring excellent color contrast with the dark text color for readability web accessibility.
+- #060A39 as font color and border color. The color was suggested on [Artyclick.com](https://colors.artyclick.com/color-shades-finder/?color=#F9F5C6) as a complementary color to the background color. The color provides excellent contrast for readibility web accessibility whithout being harsh on the eyes.
+- #D9EE3E (transparent version) as background color for buttons to start game ('Submit Username & Play Game*; 'Play Again').
+- #7B8246 (transparent version) for hover effect of buttons.
+- #FFF as background of images for choice buttons.
+
+### Color Contrast Check
+
+Testing results of color contrast checks for readability and web accessibility:
+
+- Font color for all text elements: #060A39 on main background color: #F9F5C6  
+
+    [Link to Coolors Color Contrast Checker Report](https://coolors.co/contrast-checker/060a39-f9f5c6)
+
+    ![Font color contrast report](/documentation/contrast-text.png)
+
+- Font color #060A39 on background color to start game ('Submit Username & Play Game'; 'Play Again'): #
+
+    [Link to Coolors Color Contrast Checker Report](https://coolors.co/contrast-checker/060a39-d9ee3e)
+
+    ![Button color contrast report](/documentation/contrast-button.png)
+
 ### Fonts
 ### Layout
 
