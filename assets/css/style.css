@@ -116,6 +116,11 @@ button:active {
 /* GAME SECTION */
 
 /* Scoreboard display current scores and choices. */
+.scoreboard-feedback {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
 #scoreboard-box {
     display: flex;
     flex-direction: row;
@@ -125,22 +130,38 @@ button:active {
 }
 
 #user-box {
+    display: flex;
+    flex-direction: column;
     width: 150px;
     border: 2px groove rgba(217, 238, 62);
-    box-shadow: 0 3px 3px rgba(186, 196, 106, 0.795);
+    box-shadow: 0 3px 3px rgba(186, 196, 106, 0.795); /* 3D effect */
     border-radius: 10px;
     margin-right: 9px;
     padding: 4px 0;
+    text-align: left;
     font-size: 0.8em;
 }
 
 #computer-box {
+    display: flex;
+    flex-direction: column;
     width: 150px;
     border: 2px groove #2b547e91;
-    box-shadow: 0 3px 3px #2b547e54;
+    box-shadow: 0 3px 3px #2b547e54; /* 3D effect */
     border-radius: 10px;
     padding: 4px 0;
+    text-align: left;
     font-size: 0.8em;
+}
+
+#user-box > div:first-child > p {
+    text-align: center;
+    font-weight: 600;
+}
+
+#computer-box > div:first-child > p {
+    text-align: center;
+    font-weight: 600;
 }
 
 /* Game results area: display detailed result of each round to user */
