@@ -129,7 +129,7 @@ button:active {
     border: 2px groove hotpink;
     border-radius: 10px;
     margin-right: 9px;
-    padding: 10px 0;
+    padding: 4px 0;
     font-size: 0.8em;
 }
 
@@ -137,20 +137,24 @@ button:active {
     border: 2px groove darkslateblue;
     width: 150px;
     border-radius: 10px;
-    padding: 10px 0;
+    padding: 4px 0;
     font-size: 0.8em;
 }
 
 /* Game results area: display detailed result of each round to user */
 #result-box {
-    margin-top: 10px;
-    width: 80%;
-    height: 100px;
-    font-weight: 600;
+    width: 90%;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px auto;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#result-box>p {
+    line-height: 1.5;
 }
 
 /* Interactive game area: choice buttons for user to play game. */
@@ -165,11 +169,11 @@ button:active {
 }
 
 .choice-button {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-family: "Play", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
     margin: 5px;
     padding-top: 5px;
     display: flex;
