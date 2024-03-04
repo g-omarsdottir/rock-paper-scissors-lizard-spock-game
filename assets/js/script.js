@@ -54,7 +54,26 @@ const completedSection = document.getElementById("completed-section");
 gameSection.style.display = "none";
 completedSection.style.display = "none";
 
-// Event listeners for choice-buttons and references for button elements from the DOM (document.getElementByID) for function compareChoices, the game logic. 
+// Event listeners for interactive features in the DOM: buttons
+
+// Event listener landing page section: for button 'submit username'. Triggers function to validate username. 
+usernameForm.addEventListener("submit", function (event) {
+  // Prevents the default submission of form before JavaScript can handle the username submission, while allowing submit button to be focusable using type="submit".
+  event.preventDefault();
+  if (usernameInput.value.length > 10 || usernameInput.value.length < 1) {
+    alert("Please choose a username between 1 and 10 characters.");
+    usernameInput.value = "";  // Clear form input field if username is invalid
+    return false; // to prevent submission if username is invalid (less than one or more than 10 characters).
+    // less than 1 character is handled with the required attribute in the html input field for username.
+  } else {
+    collectUsername(); // If username is valid, triggers local storage.
+    setTimeout(() => {
+      playGame(); // If username is valid, triggers display of game section.
+    }, 500);
+  }
+});
+
+// Event listeners game section: for 'choice-buttons' to play game and references for button elements from the DOM (document.getElementByID) for function compareChoices. 
 // The string for each choice button from the array choices is passed as an argument to the function compareChoices.
 document.getElementById("rock").addEventListener("click", function () {
   compareChoices("Rock");
@@ -76,22 +95,11 @@ document.getElementById("spock").addEventListener("click", function () {
   compareChoices("Spock");
 });
 
-// Event listener when user clicks button "submit username". Triggers function to validate username. 
-usernameForm.addEventListener("submit", function (event) {
-  // Prevents the default submission of form before JavaScript can handle the username submission, while allowing submit button to be focusable using type="submit".
-  event.preventDefault();
-  if (usernameInput.value.length > 10 || usernameInput.value.length < 1) {
-    alert("Please choose a username between 1 and 10 characters.");
-    usernameInput.value = "";  // Clear form input field if username is invalid
-    return false; // to prevent submission if username is invalid (less than one or more than 10 characters).
-    // less than 1 character is handled with the required attribute in the html input field for username.
-  } else {
-    collectUsername(); // If username is valid, triggers local storage
-    setTimeout(() => {
-      playGame(); // If username is valid, triggers display of game section
-    }, 500);
-  }
-});
+// Event listener completed game section: for button 'play again'.
+document.getElementById("play-again").addEventListener("click", function () {
+  resetGame(); 
+  playGame();  
+  });
 
 // Function to collect username and and store in local storage.
 function collectUsername() {
@@ -122,7 +130,7 @@ function incrementComputerScore() {
   handleScores(computerScoreElement, computerScore);
 }
 
-// Function to update the displayed score in the DOM. Using "element" provides flexibility and concise code, updating both user and computer score at once.
+// Function to handle scores (display in the DOM and set score limit to end the game). Using "element" provides flexibility and concise code, updating both user and computer score at once.
 function handleScores(element, score) {
   element.innerHTML = score;
   if (score === 10) {
@@ -163,7 +171,7 @@ function userLoses(userChoice, computerChoice) {
   updateResultElement(result, resultMessageLoses);
 }
 
-// Function to compare choices based on game rules
+// Function to compare choices based on game rules to decide which variable wins the round.
 function compareChoices(userChoice) {
   let computerChoice = generateComputerChoice();
   updateChoiceElements(userChoiceElement, computerChoiceElement, userChoice, computerChoice);
@@ -198,4 +206,17 @@ if (userScore === 10) {
   finalUserScore.innerHTML = "Your score: " + userScore;
   finalResultMessage.innerHTML = "Too bad, " + localStorage.getItem(username) + ", you lost this time around." + "<br>" + "Better luck next time!"
 }
+}
+
+function resetGame() {
+  // Scores and display of scores in the DOM
+  userScore = 0;
+  computerScore = 0;
+  computerScoreElement.innerHTML = 0;
+  userScoreElement.innerHTML = 0;
+  // Display of choices and game results of each round in the DOM
+  userChoiceElement.innerHTML = "";
+  computerChoiceElement.innerHTML = "";
+  resultElement.innerHTML = "";
+  gameSection.style.display = "none";
 }
