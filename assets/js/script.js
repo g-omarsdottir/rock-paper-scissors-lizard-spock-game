@@ -11,6 +11,7 @@ const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 let userChoiceElement = document.getElementById("user-choice");
 let computerChoiceElement = document.getElementById("computer-choice");
 let resultElement = document.getElementById("result");
+
 // Detailed result feedback referencing game rules. Constant variable because game rules are unchangeable.
 const winConditions = {
   Rock: {
@@ -51,7 +52,8 @@ const gameSection = document.getElementById("game-section");
 const completedSection = document.getElementById("completed-section");
 
 // Default display settings: display landing page, hide game section and game completed section as default.
-gameSection.style.display = "none";
+landingSection.style.display = "none";
+//gameSection.style.display = "none";
 completedSection.style.display = "none";
 
 // Event listeners for interactive features in the DOM: buttons
@@ -142,8 +144,8 @@ function handleScores(element, score) {
 
 // Function to update the displayed user and computer choices in the DOM for user feedback.
 function updateChoiceElements(userChoiceElement, computerChoiceElement, userChoice, computerChoice) {
-  userChoiceElement.innerHTML = "Your choice:" + "<br>" + userChoice;
-  computerChoiceElement.innerHTML = "Computer choice:" + "<br>" + computerChoice;
+  userChoiceElement.innerHTML = "Choice: " + userChoice;
+  computerChoiceElement.innerHTML = "Choice: " + computerChoice;
 }
 
 // Function to update the displayed game result (win, lose, tie) in the DOM.
@@ -201,10 +203,10 @@ function completedGame() {
   completedSection.style.display = "block";
 if (userScore === 10) {
   finalUserScore.innerHTML = "Your score: " + userScore;
-  finalResultMessage.innerHTML = "Congratulations, " + localStorage.getItem(username) +  "<br>" + ", you win!";
+  finalResultMessage.innerHTML = "Congratulations, " + localStorage.getItem(username) +  ", <br>" + "you win!";
 } else {
   finalUserScore.innerHTML = "Your score: " + userScore;
-  finalResultMessage.innerHTML = "Too bad, " + localStorage.getItem(username) + "<br>" + ", you lost this time around." + "<br>" + "Better luck next time!";
+  finalResultMessage.innerHTML = "Too bad, " + localStorage.getItem(username) + ", <br>" + "you lost this time around." + "<br>" + "Better luck next time!";
 }
 }
 

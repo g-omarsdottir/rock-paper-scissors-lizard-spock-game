@@ -6,11 +6,6 @@ As backup for all text: font-family: "Lucida Sans", "Lucida Sans Regular", "Luci
 */
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Working styles. To-do: remove when basic structure is styled */
-header {
-    background-color: aquamarine;
-}
-
 /* General style rules */
 * {
     margin: 0;
@@ -29,12 +24,13 @@ h2,
 h3 {
     font-family: "Play", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-        margin: 20px auto;
+    margin-bottom: 15px;
 }
 
 h1 {
     font-size: 1.5rem;
     padding: 0 10px;
+    margin-top: 5px;
 }
 
 h1>span {
@@ -53,14 +49,13 @@ button:active {
 .container {
     display: flex;
     flex-direction: column;
-    /*min-height: 100vh;*/
-    margin: 15px auto;
+    min-height: 100vh;
     text-align: center;
 }
 
 .box {
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -75,7 +70,7 @@ button:active {
     margin-bottom: 10px;
 }
 
-#rules > ul {
+#rules>ul {
     margin-left: 40px;
     list-style: circle;
     text-align: left;
@@ -119,56 +114,53 @@ button:active {
 
 /* GAME SECTION */
 
-/* Scoreboard displaying current user's and computer's score */
-#score-box {
-    background-color: yellow;
-    margin: 20px auto;
+/* Scoreboard display current scores and choices. */
+#scoreboard-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 80px;
+    margin-bottom: 10px;
 }
 
-#score-box-user {
+#user-box {
     width: 150px;
     border: 2px groove hotpink;
     border-radius: 10px;
     margin-right: 9px;
     padding: 10px 0;
+    font-size: 0.8em;
 }
 
-#score-box-computer {
+#computer-box {
     border: 2px groove darkslateblue;
     width: 150px;
     border-radius: 10px;
     padding: 10px 0;
+    font-size: 0.8em;
 }
 
-/* Game results area: user and computer choices and result of each round displayed to user */
-
+/* Game results area: display detailed result of each round to user */
 #result-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 20px;
-}
-
-#result-box-user {
-    margin-right: 40px;
-}
-
-#result-box-computer {
-    margin-bottom: 10px;
-}
-
-#result-box-result {
+    margin-top: 10px;
     width: 80%;
+    height: 100px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
 }
 
-/* Interactive game area: choice buttons for user to play game. Responsive on all device sizes due to flexbox wrap */
-
+/* Interactive game area: choice buttons for user to play game. */
 #button-box {
     display: flex;
-    justify-content: space-between;
-    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: flex-end;
-    padding-bottom: 40px;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 .choice-button {
@@ -181,12 +173,11 @@ button:active {
     padding-top: 5px;
     display: flex;
     justify-content: center;
-    /*align-items: flex-start;*/
     border: 2px solid #060a39;
     border-radius: 10px;
 }
 
-.choice-button > span {
+.choice-button>span {
     padding-right: 5px;
 }
 
@@ -214,9 +205,11 @@ button:active {
 
 #completed-section {
     margin: 60px 15px;
+    display: flex;
+    flex-direction: column;
 }
 
-#completed-section > h2 {
+#completed-section>h2 {
     font-size: 1.4em;
 }
 
@@ -244,20 +237,37 @@ button:active {
     font-weight: 600;
 }
 
-
-
-
 /* Media query: screens ≥ 375px (larger mobile devices) */
 @media screen and (min-width: 375px) {
-    .choice-button {
-        width: 160px;
-        height: 160px;
-        margin: 20px;
-        padding-top: 20px;
+
+    #result-box {
+        width: 80%;
+    }
+
+    #button-box {
+        width: 85%;
+        margin: auto;
     }
 
     #rules-img {
         width: 80%;
+    }
+}
+
+/* Media query: screens ≥ 700px (very large mobile devices) */
+@media screen and (min-width: 700px) {
+    .choice-button {
+        width: 150px;
+        height: 150px;
+        padding-top: 20px;
+    }
+
+    #result-box {
+        width: 60%;
+    }
+
+    #button-box {
+        width: 70%;
     }
 }
 
@@ -276,21 +286,25 @@ button:active {
         flex-direction: row;
         justify-content: center;
     }
+
+    #button-box {
+        width: 65%;
+    }
 }
 
 /* Media query: screens ≥992px (laptops, desktops)*/
 @media screen and (min-width: 992px) {
-      .choice-button:hover {
+    .choice-button:hover {
         font-size: 1.7rem;
         border: 3px solid #060a39;
-      }
+    }
 
-      #submit:hover {
+    #submit:hover {
         background-color: rgba(186, 196, 106, 0.795);
-      }
+    }
 
-      #play-again:hover {
+    #play-again:hover {
         background-color: rgba(186, 196, 106, 0.795);
-      }
+    }
 
 }
