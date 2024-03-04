@@ -45,41 +45,67 @@
 
         <!-- Main content -->
         <main>
-            <!-- Landing page section -->
+
+            <!-- LANDING PAGE SECTION -->
             <div id="landing-section">
+
                 <div>
+                    <!-- Welcome message -->
                     <h2>Welcome to a game of Rock, Paper, Scissors, Lizard, Spock!</h2>
+                    
+                    <!-- Introduction of game -->
                     <div>
-                        <!-- Introduction of game -->
                         <h3>About this Game</h3>
-                        <p>The game Rock, Paper, Scissors, Lizard, Spock, often referred to as the RPSLS-Game for
-                            short, is based on the old classic <a
-                                href="https://en.wikipedia.org/wiki/Rock_paper_scissors" target="_blank" rel="noopener"
-                                aria-label="Click here to read more about the origin of the game (opens in a new tab)">"Rock,
-                                Paper, Scissors" game</a>,
-                            but has the twist of two added game variables, a Lizard and Spock.</p>
-                        <p>The RPSLS-Game gained popularity after being played on <a
-                                href="https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock"
+                        <p>
+                            The game Rock, Paper, Scissors, Lizard, Spock, often referred to as the RPSLS-Game for
+                            short, is based on the old classic
+                            <a href="https://en.wikipedia.org/wiki/Rock_paper_scissors" target="_blank" rel="noopener"
+                                aria-label="Click here to read more about the origin of the game (opens in a new tab)">
+                                "Rock, Paper, Scissors" game
+                            </a>,
+                            but has the twist of two added game variables, a Lizard and Spock.
+                        </p>
+                        <p>
+                            The RPSLS-Game gained popularity after being played on
+                            <a href="https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock"
                                 target="_blank" rel="noopener"
-                                aria-label="Click here to read more about the game on the TV sitcom Big Bang Theory (opens in a new tab)">the
-                                TV sitcom The Big Bang Theory.</a></p>
-                        <p>You can play this game with friends using hand gestures, or dive right in and play it
-                            here against the computer.</p>
+                                aria-label="Click here to read more about the game on the TV sitcom Big Bang Theory (opens in a new tab)">
+                                the TV sitcom The Big Bang Theory.
+                            </a>
+                        </p>
+                        <p>
+                            You can play this game with friends using hand gestures, or dive right in and play it
+                            here against the computer.
+                        </p>
                     </div>
+
                     <!-- Instructions how to play the game -->
                     <div>
                         <h3>How to Play this Game</h3>
-                        <p>Choose one of the five options, Rock, Paper, Scissors, Lizard, or Spock by clicking on
-                            the appropriate button.</p>
-                        <p>Simultaniously, the computer's choice will be randomly generated.</p>
-                        <p>Each option can beat or be beaten by two other options based on the game rules.</p>
-                        <p>If you win, 1 point will be added to your score.</p>
-                        <p>If both players, you and the computer, choose the same variable, it's a tie. Even though
-                            everybody wins, you
-                            will not gain a point.</p>
-                        <p>If you lose, don't panic, you will not lose a point.</p>
-                        <p>When either player reaches 10 points on the scoreboard, the ultimate game champion is
-                            declared.</p>
+                        <p>
+                            Choose one of the five options, Rock, Paper, Scissors, Lizard, or Spock by clicking on
+                            the appropriate button.
+                        </p>
+                        <p>
+                            Simultaniously, the computer's choice will be randomly generated.
+                        </p>
+                        <p>
+                            Each option can beat or be beaten by two other options based on the game rules.
+                        </p>
+                        <p>
+                            If you win, 1 point will be added to your score.
+                        </p>
+                        <p>
+                            If both players, you and the computer, choose the same variable, it's a tie. Even though
+                            everybody wins, you will not gain a point.
+                        </p>
+                        <p>
+                            If you lose, don't panic, you will not lose a point.
+                        </p>
+                        <p>
+                            When either player reaches 10 points on the scoreboard, the ultimate game champion is
+                            declared.
+                        </p>
                     </div>
 
                     <!-- Game rules -->
@@ -104,21 +130,30 @@
                         </div>
                     </div>
                 </div>
-                <!-- USERNAME -->
+
+                <!-- Username form -->
                 <div class="box">
                     <div id="username-box">
                         <form id="username-form">
-                            <label for="username-input">Username: </label>
+                            <label for="username-input">
+                                Username:
+                            </label>
                             <input type="text" placeholder="Enter Username" name="username" id="username-input"
                                 required>
                             <br>
-                            <button id="submit" type="submit">Submit & <br>Play Game</button>
+                            <button id="submit" type="submit">
+                                Submit &
+                                <br>
+                                Play Game
+                            </button>
                         </form>
                     </div>
                 </div>
             </div>
-            <!-- Game section -->
+
+            <!-- GAME SECTION -->
             <div id="game-section">
+
                 <!-- Scoreboard displaying user's and computer's score. Scores are updated and updated scores displayed on screen using JavaScript -->
                 <div id="score-box" class="box">
                     <div id="score-box-user">
@@ -131,45 +166,60 @@
                     </div>
                 </div>
 
-                <!-- Display user and computer choice -->
+                <!-- Display user and computer choice using JavaScript innerHTML -->
                 <div id="result-box" class="box">
                     <div id="result-box-user">
-                        <p id="user-choice">userChoice</p>
+                        <p id="user-choice">
+                        </p>
                     </div>
                     <div id="result-box-computer">
-                        <p id="computer-choice">computerChoice</p>
+                        <p id="computer-choice">
+                        </p>
                     </div>
+                    <!-- Display game results of each round using JavaScript innerHTML -->
                     <div id="result-box-result">
-                        <p id="result">resultElement</p>
+                        <p id="result">
+                        </p>
                     </div>
                 </div>
 
                 <!-- Choice buttons to play game to-do: maybe add hidden text for screenreaders only when javascript game logic completed -->
                 <div class="box button-box">
-                    <button id="rock" class="choice-button"><span>Rock</span> <i
-                            class="fa-regular fa-hand-back-fist"></i></button>
-                    <button id="paper" class="choice-button"><span>Paper</span> <i
-                            class="fa-regular fa-hand"></i></button>
-                    <button id="scissors" class="choice-button"><span>Scissors</span> <i
-                            class="fa-regular fa-hand-scissors"></i></button>
-                    <button id="lizard" class="choice-button"><span>Lizard</span> <i
-                            class="fa-regular fa-hand-lizard"></i></button>
-                    <button id="spock" class="choice-button"><span>Spock</span> <i
-                            class="fa-regular fa-hand-spock"></i></button>
+                    <button id="rock" class="choice-button">
+                        <span>Rock</span> <i class="fa-regular fa-hand-back-fist"></i>
+                    </button>
+                    <button id="paper" class="choice-button">
+                        <span>Paper</span> <i class="fa-regular fa-hand"></i>
+                    </button>
+                    <button id="scissors" class="choice-button">
+                        <span>Scissors</span> <i class="fa-regular fa-hand-scissors"></i>
+                    </button>
+                    <button id="lizard" class="choice-button">
+                        <span>Lizard</span> <i class="fa-regular fa-hand-lizard"></i>
+                    </button>
+                    <button id="spock" class="choice-button">
+                        <span>Spock</span> <i class="fa-regular fa-hand-spock"></i>
+                    </button>
                 </div>
             </div>
 
-            <!-- Game completed section -->
+            <!-- GAME COMPLETED SECTION -->
             <div id="completed-section">
                 <div class="box">
-                <h2>Thank you for playing!</h2>
-                <h3 id="final-score">final-score</h3>
-                <h3 id="final-result">final-result</h3>
-                <button id="play-again" type="button">Play Again</button>
+                    <h2>Thank you for playing!</h2>
+                    <!-- Display final score using JavaScript innerHTML -->
+                    <h3 id="final-score">
+                    </h3>
+                    <!-- Display final game results and declare winner/loser using JavaScript innerHTML -->
+                    <h3 id="final-result">
+                    </h3>
+                    <button id="play-again" type="button">
+                        Play Again
+                    </button>
+                </div>
             </div>
-            </div>
-    </div>
-    </main>
+
+        </main>
     </div>
     <script src="https://kit.fontawesome.com/c62380739e.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>

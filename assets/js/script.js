@@ -160,7 +160,7 @@ function userWins(userChoice, computerChoice) {
 }
 
 function userTies(userChoice, computerChoice) {
-  const resultMessageTies = userChoice + " " + "equals" + " " + computerChoice + "!" + "<br>" + "It's a tie! Everybody wins!"
+  const resultMessageTies = userChoice + " " + "equals" + " " + computerChoice + "!" + "<br>" + "It's a tie! Everybody wins!";
   updateResultElement(result, resultMessageTies);
 }
 
@@ -201,10 +201,10 @@ function completedGame() {
   completedSection.style.display = "block";
 if (userScore === 10) {
   finalUserScore.innerHTML = "Your score: " + userScore;
-  finalResultMessage.innerHTML = "Congratulations, " + localStorage.getItem(username) + ", you win!"
+  finalResultMessage.innerHTML = "Congratulations, " + localStorage.getItem(username) + ", you win!";
 } else {
   finalUserScore.innerHTML = "Your score: " + userScore;
-  finalResultMessage.innerHTML = "Too bad, " + localStorage.getItem(username) + ", you lost this time around." + "<br>" + "Better luck next time!"
+  finalResultMessage.innerHTML = "Too bad, " + localStorage.getItem(username) + ", you lost this time around." + "<br>" + "Better luck next time!";
 }
 }
 
