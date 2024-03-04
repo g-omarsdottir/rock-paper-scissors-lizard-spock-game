@@ -11,7 +11,7 @@ const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 let userChoiceElement = document.getElementById("user-choice");
 let computerChoiceElement = document.getElementById("computer-choice");
 let resultElement = document.getElementById("result");
-// Detailled result feedback referencing game rules. Constant variable because game rules are unchangeable.
+// Detailed result feedback referencing game rules. Constant variable because game rules are unchangeable.
 const winConditions = {
   Rock: {
     Scissors: "crushes",
@@ -201,10 +201,10 @@ function completedGame() {
   completedSection.style.display = "block";
 if (userScore === 10) {
   finalUserScore.innerHTML = "Your score: " + userScore;
-  finalResultMessage.innerHTML = "Congratulations, " + localStorage.getItem(username) + ", you win!";
+  finalResultMessage.innerHTML = "Congratulations, " + localStorage.getItem(username) +  "<br>" + ", you win!";
 } else {
   finalUserScore.innerHTML = "Your score: " + userScore;
-  finalResultMessage.innerHTML = "Too bad, " + localStorage.getItem(username) + ", you lost this time around." + "<br>" + "Better luck next time!";
+  finalResultMessage.innerHTML = "Too bad, " + localStorage.getItem(username) + "<br>" + ", you lost this time around." + "<br>" + "Better luck next time!";
 }
 }
 
