@@ -1,3 +1,9 @@
+// Variables for landing page: Cache element references collecting username
+let usernameInput = document.getElementById("username-input"); // Represents the raw input (temporary) value of input element (subject to change as user types). For initial validation of allowed character limit. Is passed as argument to function displayUsername to store and display in DOM.
+let username = document.getElementById("username"); // Stores the validated username for function displayUsername.
+username.textContent = localStorage.getItem(username); // To display the most recent stored value of username in DOM. To-do: move in function to display message at game completion.
+let usernameForm = document.getElementById("username-form"); // As reference of submission form for event listener "submit" (for validation and trigger local storage of username).
+
 // Game variables array, possible choices for playing game
 const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 // Variables for user feedback to game status to improve UX.
@@ -31,19 +37,22 @@ const winConditions = {
   }
 };
 
-// Scoreboard variables for functions to increment scores and display updated scores in the DOM
-// Default scores at game start are 0
+// Variables for scoreboard: to increment scores and display updated scores in the DOM. Default scores at game start are 0.
 let userScore = 0;
 let userScoreElement = document.getElementById("user-score");
 let computerScore = 0;
 let computerScoreElement = document.getElementById("computer-score");
+
+// Variables for game completed section
+let finalResultMessage = document.getElementById("final-result");
+let finalUserScore = document.getElementById("final-score");
 
 // Flow of the game: variables for displaying or hiding sections according to logical flow of the game.
 const landingSection = document.getElementById("landing-section");
 const gameSection = document.getElementById("game-section");
 const completedSection = document.getElementById("completed-section");
 
-// Display landing page, hide game section and game completed section as default. Use JavaScript to handle both hiding and displaying for better overview. 
+// Default display settings: display landing page, hide game section and game completed section as default. Use JavaScript to handle both hiding and displaying for better overview. 
 gameSection.style.display = "none";
 completedSection.style.display = "none";
 
@@ -70,13 +79,6 @@ document.getElementById("lizard").addEventListener("click", function () {
 document.getElementById("spock").addEventListener("click", function () {
   compareChoices("Spock");
 });
-
-// Section for collecting username. To-do: place variables with other variables when code successfully completed.
-//Cache element references for performance
-let usernameInput = document.getElementById("username-input"); // Represents the raw input (temporary) value of input element (subject to change as user types). For initial validation of allowed character limit. Is passed as argument to function displayUsername to store and display in DOM.
-let username = document.getElementById("username"); // Stores the validated username for function displayUsername.
-username.textContent = localStorage.getItem(username); // To display the most recent stored value of username in DOM. To-do: move in function to display message at game completion.
-let usernameForm = document.getElementById("username-form"); // As reference of submission form for event listener "submit" (for validation and trigger local storage of username).
 
 // Event listener when user clicks button "submit username". To validate username, trigger local storage of the validated username and playGame function.
 usernameForm.addEventListener("submit", function (event) {
@@ -125,7 +127,6 @@ function incrementComputerScore() {
   updateScoreElement(computerScoreElement, computerScore);
 }
 
-//
 // Function to update the displayed score in the DOM. Using "element" provides flexibility and concise code, updating both user and computer score at once.
 function updateScoreElement(element, score) {
   element.innerHTML = score;
