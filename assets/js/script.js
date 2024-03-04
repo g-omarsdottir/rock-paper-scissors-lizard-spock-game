@@ -1,14 +1,13 @@
-// Variables for landing page: Cache element references collecting username
+// Variables for landing page: Cache element references for collecting username.
 let usernameInput = document.getElementById("username-input"); // Represents the raw input (temporary) value of input element (subject to change as user types). For initial validation of allowed character limit. Is passed as argument to function displayUsername to store and display in DOM.
 let username = document.getElementById("username"); // Stores the validated username for function displayUsername.
 username.textContent = localStorage.getItem(username); // To display the most recent stored value of username in DOM. To-do: move in function to display message at game completion.
 let usernameForm = document.getElementById("username-form"); // As reference of submission form for event listener "submit" (for validation and trigger local storage of username).
 
-// Game variables array, possible choices for playing game
+// Variables for game section: Game variables array, possible choices for playing game.
 const choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-// Variables for user feedback to game status to improve UX.
-// Apply method (document.getElementByID) to retrieve references for elements from the DOM 
-//  for functions to update the displayed variables in the DOM.
+
+// Variables for user feedback to game status. Apply method (document.getElementByID) to retrieve references for elements from the DOM for functions to update the displayed variables in the DOM.
 // Using let because the choices and results are dynamic.
 let userChoiceElement = document.getElementById("user-choice");
 let computerChoiceElement = document.getElementById("computer-choice");
@@ -43,22 +42,20 @@ let userScoreElement = document.getElementById("user-score");
 let computerScore = 0;
 let computerScoreElement = document.getElementById("computer-score");
 
-// Variables for game completed section
+// Variables for game completed section: for user feedback.
 let finalResultMessage = document.getElementById("final-result");
 let finalUserScore = document.getElementById("final-score");
 
-// Flow of the game: variables for displaying or hiding sections according to logical flow of the game.
+// Variables for displaying or hiding sections according to logical flow of the game.
 const landingSection = document.getElementById("landing-section");
 const gameSection = document.getElementById("game-section");
 const completedSection = document.getElementById("completed-section");
 
-// Default display settings: display landing page, hide game section and game completed section as default. Use JavaScript to handle both hiding and displaying for better overview. 
+// Default display settings: display landing page, hide game section and game completed section as default.
 gameSection.style.display = "none";
 completedSection.style.display = "none";
 
-// Event listeners for choice-buttons - a method to retrieve references for button elements from the DOM (document.getElementByID) and 
-//  add button references to event listener method (addEventListeners). 
-// When buttons are clicked, the function compareChoices, the game logic, is called.
+// Event listeners for choice-buttons and references for button elements from the DOM (document.getElementByID) for function compareChoices, the game logic. 
 // The string for each choice button from the array choices is passed as an argument to the function compareChoices.
 document.getElementById("rock").addEventListener("click", function () {
   compareChoices("Rock");
@@ -86,9 +83,8 @@ usernameForm.addEventListener("submit", function (event) {
   event.preventDefault();
   if (usernameInput.value.length > 10 || usernameInput.value.length < 1) {
     alert("Please choose a username between 1 and 10 characters.");
-    // Clear form input field if username is invalid
-    usernameInput.value = "";
-    return false; // to prevent submission if username is invalid (more than 10 characters)
+    usernameInput.value = "";  // Clear form input field if username is invalid
+    return false; // to prevent submission if username is invalid (less than one or more than 10 characters)
     // less than 1 character is handled with the required attribute in the html input field for username.
   } else {
     collectUsername();
@@ -103,7 +99,7 @@ function collectUsername() {
   localStorage.setItem(username, usernameInput.value); // To store the username in local storage
 }
 
-// Displays the game section of index.html to allow user to play the game and hides the landing page section and game completed section for a logical flow of the website.
+// Display game section (user sees buttons and can play game) and hide the landing page section and game completed section for a logical flow of the website/game.
 function playGame() {
   landingSection.style.display = "none";
   gameSection.style.display = "block";
@@ -132,7 +128,7 @@ function updateScoreElement(element, score) {
   element.innerHTML = score;
 }
 
-// Function to update the displayed user and computer choices in the DOM.
+// Function to update the displayed user and computer choices in the DOM for user feedback.
 function updateChoiceElements(userChoiceElement, computerChoiceElement, userChoice, computerChoice) {
   userChoiceElement.innerHTML = "Your choice:" + "<br>" + userChoice;
   computerChoiceElement.innerHTML = "Computer choice:" + "<br>" + computerChoice;
@@ -143,7 +139,7 @@ function updateResultElement(resultElement, result) {
   resultElement.innerHTML = result;
 }
 
-// Functions for actions depending on results of compareChoices
+// Functions for game results of each round according to comparison of choices (compareChoices) for user feedback.
 function userWins(userChoice, computerChoice) {
   incrementUserScore();
   const reason = winConditions[userChoice][computerChoice];
@@ -158,7 +154,7 @@ function userTies(userChoice, computerChoice) {
 
 function userLoses(userChoice, computerChoice) {
   incrementComputerScore();
-  const reason = winConditions[computerChoice][userChoice]; // Note the switched order
+  const reason = winConditions[computerChoice][userChoice]; 
   const resultMessageLoses = computerChoice + " " + reason + " " + userChoice + "!" + "<br>" + " You lose!";
   updateResultElement(result, resultMessageLoses);
 }
