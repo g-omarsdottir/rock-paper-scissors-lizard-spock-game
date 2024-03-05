@@ -220,11 +220,33 @@ to-do:    A link to access the rules again, which open in a new window / OR blen
 
 ## Testing
 ### Validator Testing
-- #### HTML
-- #### CSS 
-- #### Lighthouse Report
+#### HTML
+
+    No errors - index.html passed though the official W3C Markup Validator without errors: [W3C Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fg-omarsdottir.github.io%2Frock-paper-scissors-lizard-spock-game%2F)
+
+![html-validator-results](/documentation/html-validator.png)
+
+#### CSS 
+    NO errors - style.css passed through the official W3C CSS Validator without erros: [W3C CSS Validator Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fg-omarsdottir.github.io%2Frock-paper-scissors-lizard-spock-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+    ![css-validator-results](/documentation/css-validator.png)
+
+### JavaScript
+
+No errors - script.js passed through the JSHint Validator without errors
+
+![javascript-validator](/documentation/javascript-validator.png)
+
+#### Lighthouse Report
+
 - Desktop analysis
+
+    ![lighthouse-report-desktop](/documentation/lighthouse-desktop.png)
+
 - Mobile devices analysis
+
+    ![lighthouse-report-mobile](/documentation/lighthouse-mobile.png)
+
 - #### WAVE Web Accessibility Evaluation Tool
 ### Manual Testing
 - #### Testing User Stories
