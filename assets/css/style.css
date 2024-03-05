@@ -33,10 +33,6 @@ h1 {
     padding: 10px;
 }
 
-h1>span {
-    white-space: nowrap;
-}
-
 h3>span {
     white-space: nowrap;
 }
