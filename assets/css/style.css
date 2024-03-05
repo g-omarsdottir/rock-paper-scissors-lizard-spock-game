@@ -30,11 +30,14 @@ h3 {
 
 h1 {
     font-size: 1.5rem;
-    padding: 0 10px;
-    margin-top: 5px;
+    padding: 10px;
 }
 
 h1>span {
+    white-space: nowrap;
+}
+
+h3>span {
     white-space: nowrap;
 }
 
@@ -56,19 +59,20 @@ button:active {
 
 .box {
     display: flex;
-    /*flex-direction: column;*/
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
+    margin: auto 20px;
 }
 
-/* LANDING PAGE SECTION */
+LANDING PAGE SECTION 
 #landing-section {
-    margin: auto 20px;
+    margin: 50px;
 }
 
 #landing-section p {
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 #rules>ul {
@@ -87,6 +91,7 @@ button:active {
 #username-box {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     text-align: right;
     flex-wrap: wrap;
     border: 2px groove #7B8246;
@@ -255,7 +260,7 @@ button:active {
 
 #play-again {
     width: 200px;
-    margin: 5px auto;
+    margin: 30px auto;
     padding: 20px;
     background: rgba(217, 238, 62, 0.719);
     border: 2px solid #060a39;

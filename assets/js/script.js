@@ -52,9 +52,9 @@ const gameSection = document.getElementById("game-section");
 const completedSection = document.getElementById("completed-section");
 
 // Default display settings: display landing page, hide game section and game completed section as default.
-landingSection.style.display = "none";
+// Working code while styling. To-do: delete: landingSection.style.display = "none";
 gameSection.style.display = "none";
-//completedSection.style.display = "none";
+completedSection.style.display = "none";
 
 // Event listeners for interactive features in the DOM: buttons
 
