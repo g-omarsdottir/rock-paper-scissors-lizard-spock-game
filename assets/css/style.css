@@ -62,7 +62,7 @@ button:active {
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    margin: auto 20px;
+    margin: 20px;
 }
 
 LANDING PAGE SECTION 
@@ -272,35 +272,61 @@ LANDING PAGE SECTION
 
 /* Media query: screens ≥ 375px (larger mobile devices) */
 @media screen and (min-width: 375px) {
+.box {
+    margin: 7%;
+}
 
+#rules {
+    margin-left: 30%;
+}
+
+#rules-img {
+    width: 100%;
+    margin: 0;
+}
     #result-box {
         width: 80%;
     }
 
     #button-box {
-        width: 85%;
+        width: 450px;
         margin: auto;
-    }
-
-    #rules-img {
-        width: 80%;
     }
 }
 
 /* Media query: screens ≥ 700px (very large mobile devices) */
 @media screen and (min-width: 700px) {
+    h1 {
+        padding-top: 20px;
+    }
+
+    .box {
+        margin: 10%;
+    }
+    
     .choice-button {
         width: 150px;
         height: 150px;
         padding-top: 20px;
     }
 
+#scoreboard-box {
+    height: 100px;
+    margin-top: 40px;
+}
+
+#user-box, #computer-box {
+    width: 250px;
+    font-size: 1em;
+}
+
     #result-box {
         width: 60%;
+        height: 200px;
     }
 
     #button-box {
-        width: 70%;
+        width: 80%;
     }
 }
 
@@ -321,7 +347,7 @@ LANDING PAGE SECTION
     }
 
     #button-box {
-        width: 65%;
+        width: 600px;
     }
 }
 
@@ -340,4 +366,14 @@ LANDING PAGE SECTION
         background-color: rgba(186, 196, 106, 0.795);
     }
 
+    #button-box {
+        width: 50%;
+    }
+}
+
+/* Media query: screens ≥1200px (large desktops)*/
+@media screen and (min-width: 1200px) {
+    #button-box {
+        width: 40%;
+    }
 }
