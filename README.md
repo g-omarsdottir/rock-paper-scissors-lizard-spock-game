@@ -132,12 +132,23 @@ The wireframes show designs for desktop and mobile devices. The website is respo
 ![End Page Desktop](/documentation/end-page.png)
 
 ## Features
--  The website is responsive on all device sizes.
-- The user lands on a landing page. After entering a username and submitting it, the user is automatically forwarded to the game section. 
-- After completing the game, the user has the option to return to game page to play again. 
-- The user does not have the option to navigate between the pages.
-- Buttons have the pseudo-class active to give users feedback when a choice button for a game variable is clicked with a box-shadow effect. On desktop screens operated with a 
-- mouse, there is also the pseudo-class hover at mouse-over, i.e. when the mouse is hovered over the buttons by a slight change of color.
+-  The website is responsive on all devices and screen sizes.
+- The user lands on a landing page. 
+- After entering and submitting a username, the user is automatically forwarded to the game section.
+- The Header is linked/anchored to the landing page.
+
+- After completing the game, the user has the option to 
+    - return to game page to play again, skipping the landing page and having to enter a username again, or
+    - return to home, navigates to landing page.
+
+- The user does not have the option to navigate between the website sections, except for navigate to landing page by clicking the anchored header.
+- All buttons have a pseudo-class for active and hover to give users feedback when a button is pushed.
+    - Hover/mouse-over, i.e. when the mouse curser hovers over the buttons:
+        - Slight change of background color.
+        - Cursor is a pointer, i.e. a hand.
+        - Choice buttons additionally get a thicker border and larger font size.
+    - Active: a box-shadow for 3D effect when button is pushed.
+
 
 ### Interactive Elements
 - Input element for username. The user cannot move forward to playing game without entering a username. 

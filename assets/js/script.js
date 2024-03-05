@@ -1,6 +1,7 @@
 // Variables for landing page: to collect username at form submission and store in local storage.
 let usernameInput = document.getElementById("username-input"); // Reference for validation of username. 
 let username = document.getElementById("username");
+username.textContent = localStorage.getItem(username); // Display username in the scoreboard.
 let usernameForm = document.getElementById("username-form"); // Reference of submission form for event listener "submit".
 
 // Variables for game section: Game variables array, possible choices for playing game.
