@@ -6,9 +6,9 @@ Two exciting game variables have been added to the game, a *Lizard* and the reno
 
 This is an easy and enjoyable game that requires no previous knowledge and is played against the computer. The old classic game is often used in real life as a tiebreaker, like flipping a coin, when trivial decisions need to be made. Although the goal here is just to have fun, one might use the game result as inspirational help with decision making, like choosing between two equally appealing options for dinner.
 
-[View the live project here.](https://g-omarsdottir.github.io/rock-paper-scissors-lizard-spock-game/)
+![Mockup](/documentation/mockup.png)
 
-## Mockup
+[View the live project here.](https://g-omarsdottir.github.io/rock-paper-scissors-lizard-spock-game/)
 
 ### How to play the game:
 
@@ -30,12 +30,12 @@ The game can also be played in person using hand gestures. The player's count to
 
 ## Table of Contents
 
-### [Deployment and Local Development](#deployment-and-local-development-1)
-- #### [Deployment](#deployment-1)
-    - ##### [Deployment using GitHub pages](#deployment-using-github-pages-1)
-- ### [Local Development](#local-development-1)
-    - #### [Local Clone](#local-clone-1)
-    - #### [Fork](#fork-1)
+- [Deployment and Local Development](#deployment-and-local-development-1)
+- [Deployment](#deployment-1)
+    - [Deployment using GitHub pages](#deployment-using-github-pages-1)
+- [Local Development](#local-development-1)
+    - [Local Clone](#local-clone-1)
+    - [Fork](#fork-1)
 
 
 ## Project and Site Owner Goals
