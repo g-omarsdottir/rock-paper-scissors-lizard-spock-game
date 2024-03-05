@@ -64,7 +64,7 @@ usernameForm.addEventListener("submit", function (event) {
   event.preventDefault();
   if (usernameInput.value.length > 10 || usernameInput.value.length < 1) {
     alert("Please choose a username between 1 and 10 characters.");
-    usernameInput.value = "";  // Clear form input field if username is invalid
+    usernameInput.value = ""; // Clear form input field if username is invalid
     return false; // to prevent submission if username is invalid (less than one or more than 10 characters).
     // less than 1 character is handled with the required attribute in the html input field for username.
   } else {
@@ -99,9 +99,18 @@ document.getElementById("spock").addEventListener("click", function () {
 
 // Event listener completed game section: for button 'play again'.
 document.getElementById("play-again").addEventListener("click", function () {
-  resetGame(); 
-  playGame();  
-  });
+  setTimeout(() => {
+    resetGame();
+    playGame();
+  }, 500);
+});
+
+// Event listener for return to landing page section at game completion
+document.getElementById("return-home").addEventListener("click", function () {
+  setTimeout(() => {
+    window.location.href = "index.html"
+  }, 500);
+});
 
 // Function to collect username and and store in local storage.
 function collectUsername() {
@@ -138,7 +147,7 @@ function handleScores(element, score) {
   if (score === 10) {
     setTimeout(() => {
       completedGame();
-      }, 300);
+    }, 300);
   }
 }
 
@@ -168,7 +177,7 @@ function userTies(userChoice, computerChoice) {
 
 function userLoses(userChoice, computerChoice) {
   incrementComputerScore();
-  const reason = winConditions[computerChoice][userChoice]; 
+  const reason = winConditions[computerChoice][userChoice];
   const resultMessageLoses = computerChoice + " " + reason + " " + userChoice + "!" + "<br>" + " You lose!";
   updateResultElement(result, resultMessageLoses);
 }
@@ -201,13 +210,13 @@ function completedGame() {
   landingSection.style.display = "none";
   gameSection.style.display = "none";
   completedSection.style.display = "block";
-if (userScore === 10) {
-  finalUserScore.innerHTML = "Your score: " + userScore;
-  finalResultMessage.innerHTML = "Congratulations, " + localStorage.getItem(username) +  ", <br>" + "you win!";
-} else {
-  finalUserScore.innerHTML = "Your score: " + userScore;
-  finalResultMessage.innerHTML = "Too bad, " + localStorage.getItem(username) + ", <br>" + "you lost this time around." + "<br>" + "Better luck next time!";
-}
+  if (userScore === 10) {
+    finalUserScore.innerHTML = "Your score: " + userScore;
+    finalResultMessage.innerHTML = "Congratulations, " + localStorage.getItem(username) + ", <br>" + "you win!";
+  } else {
+    finalUserScore.innerHTML = "Your score: " + userScore;
+    finalResultMessage.innerHTML = "Too bad, " + localStorage.getItem(username) + ", <br>" + "you lost this time around." + "<br>" + "Better luck next time!";
+  }
 }
 
 function resetGame() {
