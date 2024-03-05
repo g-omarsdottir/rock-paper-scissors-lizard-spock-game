@@ -67,10 +67,9 @@ button:active {
     justify-content: center;
     flex-wrap: wrap;
     margin: 20px;
-    padding: 10px;
 }
 
-/*LANDING PAGE SECTION*/ 
+/*LANDING PAGE SECTION*/
 #landing-section {
     margin: 50px;
 }
@@ -148,7 +147,8 @@ button:active {
     width: 140px;
     height: 80px;
     border: 2px groove rgba(217, 238, 62);
-    box-shadow: 0 3px 3px rgba(186, 196, 106, 0.795); /* 3D effect */
+    box-shadow: 0 3px 3px rgba(186, 196, 106, 0.795);
+    /* 3D effect */
     border-radius: 10px;
     margin-right: 5px;
     padding: 4px 0;
@@ -162,19 +162,20 @@ button:active {
     width: 140px;
     height: 80px;
     border: 2px groove #2b547e91;
-    box-shadow: 0 3px 3px #2b547e54; /* 3D effect */
+    box-shadow: 0 3px 3px #2b547e54;
+    /* 3D effect */
     border-radius: 10px;
     padding: 4px 0;
     text-align: left;
     font-size: 0.8em;
 }
 
-#user-box > div:first-child > p {
+#user-box>div:first-child>p {
     text-align: center;
     font-weight: 600;
 }
 
-#computer-box > div:first-child > p {
+#computer-box>div:first-child>p {
     text-align: center;
     font-weight: 600;
 }
@@ -294,14 +295,14 @@ button:active {
 
 /* Media query: screens ≥ 375px (larger mobile devices) */
 @media screen and (min-width: 375px) {
-.box {
-    margin: 7%;
-}
+    .box {
+        margin: 5%;
+    }
 
-#rules-img {
-    width: 100%;
-    margin: 0;
-}
+    #rules-img {
+        max-width: 370px;
+        margin: 0;
+    }
 
     #result-box {
         width: 80%;
@@ -309,7 +310,6 @@ button:active {
 
     #button-box {
         max-width: 450px;
-        margin: 15px;
     }
 }
 
@@ -322,31 +322,27 @@ button:active {
     .box {
         margin: auto 10%;
     }
-    
+
     .choice-button {
         width: 150px;
         height: 150px;
         padding-top: 20px;
     }
 
-    #rules-img {
-        max-width: 80;
-        margin-bottom: 40px;
-    }
-
     #username-box {
         margin-bottom: 20px;
     }
 
-#scoreboard-box {
-    height: 100px;
-    margin-top: 40px;
-}
+    #scoreboard-box {
+        height: 100px;
+        margin-top: 40px;
+    }
 
-#user-box, #computer-box {
-    width: 250px;
-    font-size: 1em;
-}
+    #user-box,
+    #computer-box {
+        width: 250px;
+        font-size: 1em;
+    }
 
     #result-box {
         width: 60%;
@@ -355,6 +351,7 @@ button:active {
 
     #button-box {
         width: 80%;
+        margin: auto;
     }
 }
 
@@ -362,11 +359,6 @@ button:active {
 @media screen and (min-width: 768px) {
     h1 {
         font-size: 1.7rem;
-    }
-
-    #rules-img {
-        max-width: 50%;
-        margin-bottom: 40px;
     }
 
     #username-box {
@@ -385,7 +377,7 @@ button:active {
     button:hover {
         cursor: pointer;
     }
-    
+
     .choice-button:hover {
         font-size: 1.6rem;
         border: 3px solid #060a39;
@@ -393,10 +385,6 @@ button:active {
 
     #return-home:hover {
         background-color: whitesmoke;
-    }
-
-    #rules-img {
-        max-width: 40;
     }
 
     #submit:hover {
