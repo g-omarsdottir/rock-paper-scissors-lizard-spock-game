@@ -276,6 +276,9 @@ The JavaScript passed through the JSHint Validator without errors:
 
 #### WAVE Web Accessibility Evaluation Tool
 
+The website passed through the WAVE Web Accessibility Evaluation Tool validator without errors:
+
+![wave-validator-report](/documentation/wave-validator.png)
 
 ### Manual Testing
 
