@@ -233,8 +233,7 @@ Web Accessibility was ensured by:
 - [Google AI language model](https://gemini.google.com/app) to find references for troubleshooting.
 - [Google Fonts](https://fonts.google.com/).
 - [Fontawesome](https://fontawesome.com/).
-- Am I Responsive for mockup for this README.
-- http://www.responsinator.com/ to show the website layout on various devices for this README.
+- [Am I Responsive](https://ui.dev/amiresponsive) for mockup for this README.
 - [Optimizilla](https://imagecompressor.com/) to optimize image size.   
 - [Canva](Canva.com) to edit images and create the rules illustration for the website and this README.
 - [Balsamiq](https://balsamiq.com/wireframes/desktop/) to create wireframes and layout map of the website for this README.
@@ -368,7 +367,7 @@ To fork the repository:
 - [W3 schools](https://www.w3schools.com/jsref/prop_text_value.asp) for displaying username value in personalized user feedback.
 - [Delay with setTimout()](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) to display the visual feedback of pushing submit and play button for improved UX.  
 - [inclusive-components.design](https://inclusive-components.design/toggle-button/) for css style of a pressed button with 3D effect using box-shadow.
-- [timonweb.com](randomly generated computer's choice: https://timonweb.com/javascript/how-to-get-a-random-value-from-a-javascript-array/) for randomly generated computer's choice.
+- [timonweb.com](https://timonweb.com/javascript/how-to-get-a-random-value-from-a-javascript-array/) for randomly generated computer's choice.
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) for default behavior of HTML attribute *type"submit"* and overwrite this with *type="button"* to script event handlers in JavaScript. See [Bugs](#resolved-bugs) for details of possible complications using each attribute. 
 - My friend Stephan Reich, Software Developer, for showing me a way to solve a bug using the standard JavaScript function *event.preventDefault();*. See [Bugs](#resolved-bugs) for details.
 
