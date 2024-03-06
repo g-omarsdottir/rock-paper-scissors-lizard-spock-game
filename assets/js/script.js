@@ -1,6 +1,6 @@
 // Variables for landing page: to collect username at form submission and store in local storage.
 let usernameInput = document.getElementById("username-input"); // Reference for validation of username. 
-let username = document.getElementById("username");
+let username = document.getElementById("username-display");
 username.textContent = localStorage.getItem(username); // Display username in the scoreboard.
 let usernameForm = document.getElementById("username-form"); // Reference of submission form for event listener "submit".
 
@@ -53,7 +53,6 @@ const gameSection = document.getElementById("game-section");
 const completedSection = document.getElementById("completed-section");
 
 // Default display settings: display landing page, hide game section and game completed section as default.
-// Working code while styling. To-do: delete: landingSection.style.display = "none";
 gameSection.style.display = "none";
 completedSection.style.display = "none";
 

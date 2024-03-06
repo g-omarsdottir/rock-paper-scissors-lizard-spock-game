@@ -222,18 +222,19 @@ to-do:    A link to access the rules again, which open in a new window / OR blen
 ### Validator Testing
 #### HTML
 
-    No errors - index.html passed though the official W3C Markup Validator without errors: [W3C Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fg-omarsdottir.github.io%2Frock-paper-scissors-lizard-spock-game%2F)
+The HTML passed through the official W3C Markup Validator without errors: [W3C Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fg-omarsdottir.github.io%2Frock-paper-scissors-lizard-spock-game%2F)
 
 ![html-validator-results](/documentation/html-validator.png)
 
 #### CSS 
-    NO errors - style.css passed through the official W3C CSS Validator without erros: [W3C CSS Validator Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fg-omarsdottir.github.io%2Frock-paper-scissors-lizard-spock-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-    ![css-validator-results](/documentation/css-validator.png)
+The CSS passed through the official W3C CSS Validator without erros: [W3C CSS Validator Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fg-omarsdottir.github.io%2Frock-paper-scissors-lizard-spock-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+![css-validator-results](/documentation/css-validator.png)
 
 ### JavaScript
 
-No errors - script.js passed through the JSHint Validator without errors
+The JavaScript passed through the JSHint Validator without errors:
 
 ![javascript-validator](/documentation/javascript-validator.png)
 
