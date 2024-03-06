@@ -46,17 +46,20 @@ The game can also be played in person using hand gestures. The player's count to
 - [Credits](#credits)
 
 ## Project and Site Owner Goals
+
 - The goal is to create an easy and enjoyable game that requires no previous knowledge. Since the game is played against the computer, the user does not require a counterpart and can play whenever and wherever on all screen sizes, mobile and desktop devices.
 
 ## User Experience
 
 ### Target Audience
+
 - People who enjoy playing online games. 
 - People who don't have or do not wish to have a counterpart to play with.
 - Fans of the sitcom The Big Bang Theory.
 - Fans of the Star Trek franchise.
 
 ### First Time Visitors Goals
+
 As a firs time user, 
 - I can play a familiar game that introduces additional variables so I can enjoy learning new things without straining myself.
 - I can easily understand and follow the simple rules of the game, even if without reading much text, since the rules are depicted as an illustration, too.
@@ -64,11 +67,13 @@ As a firs time user,
 - I don’t have to organize an opponent player or even have friends to play the game because I’m playing against the computer.
 
 ### Returning Visitors Goals
+
 As a returning visitor, 
 - I enjoy getting detailed feedback of the game results and can enjoy the amusing characteristics of the two additional variables without having to read the rules again.
 - I still find the game exciting because it's impossible to predict the computer's next move.
 
 ### Frequent Visitors Goals
+
 As a frequent visitor, 
 - I can play a familiar game to pass time in a fun way and/or to clear my head between long working sessions.
 - I find it exciting to find out 
@@ -76,9 +81,11 @@ As a frequent visitor,
     - if it is indeed impossible to foresee the computer's next play move or if I can detect a pattern.
 
 ## Design
+
 The game was designed for mobile devices with a minimum width of 320px first. The styles were then adjusted to larger mobile device screens, tablets and desktop screens. The game is responsive on all screen sizes. 
 
 ### Imagery
+
 The buttons to play the game display an image of the variable they represent.  
 
 ### Color Scheme 
@@ -109,6 +116,7 @@ Testing results of color contrast checks for readability and web accessibility:
     ![Button color contrast report](/documentation/contrast-button.png)
 
 ### Fonts
+
 Both font types were chosen after researching online, which fonts are popular to use in computer-games, while offering excellent readability for improved web accessibility.
 - Play, sans-serif, were used for headings and buttons to play the game. The font has a fun computer-game like touch.
 - Work Sans, sans-serif, was used for all other text.
@@ -125,6 +133,7 @@ The choice buttons for the game variables are placed at the flex-bottom. The use
 ![Layout Map](/documentation/layout-map.png)
 
 ### Wireframes
+
 The wireframes show designs for desktop and mobile devices. The website is responsive on all screen sizes.
 1. Landing Page Section
 
@@ -139,12 +148,14 @@ The wireframes show designs for desktop and mobile devices. The website is respo
 ![End Page](/documentation/end-page.png)
 
 ## Features
+
 - The website is responsive on all devices and screen sizes.
 - The user lands on the landing page. 
 - The Header is linked/anchored to the landing page, so the user can return to home at all times.
 - The user does not have the option to navigate between the website sections, except for navigate to landing page by clicking the anchored header.
 
 ### Interactive Elements
+
 - Input element for username. The user cannot move forward to playing game without entering a username. 
 - The username must meet a criteria: consist of characters between one and 10
     - If the user enters an invalid username, the user is informed
@@ -166,6 +177,7 @@ The wireframes show designs for desktop and mobile devices. The website is respo
     - Active: a box-shadow for 3D effect when button is pushed.
 
 ### General Features of Each Page
+
 - Landing page
 - The landing page contains 
     - A welcome message 
@@ -197,9 +209,11 @@ The wireframes show designs for desktop and mobile devices. The website is respo
 - A famous quote from the character Spock showing his signature hand gesture.
 
 ### Features Left to Implement
+
 - Option to switch between ligt and dark mode.
 
 ## Accessibility 
+
 Web Accessibility was ensured by:
 - Using semantic HTML elements to structure the content of each section.
 - Applying alternative text to the only image used, the illustration of the game rules.
@@ -218,11 +232,13 @@ Web Accessibility was ensured by:
 ## Technology Used
 
 ### Languages Used
+
 - JavaScript
 - HTML5
 - CSS3
 
 ### Frameworks, Libraries and Programs Used
+
 - [GitHub](https://github.com/) to store code files and deploy website.
 - [Git](https://git-scm.com/) for version control.
 - [Gitpod](https://www.gitpod.io/) as a Cloud Development Environment (CDE).
@@ -244,7 +260,9 @@ Web Accessibility was ensured by:
 - [table-magic](https://stevecat.net/table-magic/) to create table for section [Bugs](#resolved-bugs) in this README.
 
 ## Testing
+
 ### Validator Testing
+
 #### HTML
 
 The HTML passed through the official W3C Markup Validator without errors: [W3C Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fg-omarsdottir.github.io%2Frock-paper-scissors-lizard-spock-game%2F)
@@ -311,8 +329,6 @@ Manual tests were performed on the deployed website.
 - The game was tested by friends and family on various mobile devices, iPhone and Android, and desktop using Windows, iOS. 
 - No issues were reported.
 
-- #### Full Testing
-
 ## Bugs
 
 ### Known Bugs
@@ -332,9 +348,11 @@ There are no known bugs.
 ## Deployment and Local Development
 
 ### Deployment
+
 The website was deployed using GitHub pages.
 
 #### Deployment using GitHub pages
+
 To deploy the repository:
 - Log into GitHub and navigate to the [repository of this project](https://github.com/g-omarsdottir/rock-paper-scissors-lizard-spock-game).
 - Navigate to settings of the repository on the top navigation menu.
@@ -347,6 +365,7 @@ To deploy the repository:
 ### Local Development
 
 #### Local Clone
+
 To clone the repository:
 - Log in to GitHub and navigate to the [repository of this project](https://github.com/g-omarsdottir/rock-paper-scissors-lizard-spock-game).
 - Click on the green "Code" button to open dropdown menu, select "Clone with HTTPS, SSH or GitHub CLI" and copy the link provided.
@@ -356,13 +375,19 @@ To clone the repository:
 - Press "Enter" and your local clone will be created.
 
 #### Fork
+
 To fork the repository:
 - Log in (or sign up) to Github.
 - Navigate to the [repository of this project](https://github.com/g-omarsdottir/rock-paper-scissors-lizard-spock-game).
 - Click the "Fork" button in the top right corner to open dropdown menu and select "Create a new fork".
 
 ## Credits
+
+- The content for this project was written by me, Gudrun Omarsdottir. 
+- The game design this expanded game was created by [Sam Kass with Karen Brylan](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock).
+
 ### Content
+
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage ) for local storage, i.e. store and retrieve username value.
 - [W3 schools](https://www.w3schools.com/jsref/prop_text_value.asp) for displaying username value in personalized user feedback.
 - [Delay with setTimout()](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) to display the visual feedback of pushing submit and play button for improved UX.  
@@ -372,6 +397,7 @@ To fork the repository:
 - My friend Stephan Reich, Software Developer, for showing me a way to solve a bug using the standard JavaScript function *event.preventDefault();*. See [Bugs](#resolved-bugs) for details.
 
 ### Imagery
+
 - [Favicon](https://www.freefavicon.com/freefavicons/icons/iconinfo/video-game-controller-icon-152-227918.html)
 - Pixabay: by user [Benjamin Balazs](https://pixabay.com/photos/spock-star-trek-vulcan-1541528/) 
 - Freeimages by users:
@@ -379,3 +405,8 @@ To fork the repository:
     - [kraaft](https://www.freeimages.com/photo/pebble-series-1-1517634)
     - [createsime](https://www.freeimages.com/photo/old-paper-1191767)
     - [PhotoObjects.net](https://www.freeimages.com/photo/stainless-steel-scissors-1940007)
+
+### Acknowledgements
+
+- My mentor, Mitko Bachvarov, for guidance and valuable advice.
+- The Slack community for information and motivation.
