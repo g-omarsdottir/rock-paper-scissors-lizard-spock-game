@@ -148,10 +148,13 @@ The wireframes show designs for desktop and mobile devices. The website is respo
 - Input element for username. The user cannot move forward to playing game without entering a username. 
 - The username must meet a criteria: consist of characters between one and 10
     - If the user enters an invalid username, the user is informed
-    - Less than 1 character: alert 
-    - More than 10 characters: alert
-        - Input field is cleared automatically
+        - Less than 1 character: alert 
 
+        ![alert input-field](/documentation/alert-inputfield.png)
+        - More than 10 characters: alert 
+        
+        ![alert invalid](/documentation/alert-invalid.png)
+        - Input field is automatically cleared.
 - Buttons to choose which variable the user wants to play for each round.
 - Button to return to game and play again. After completing the game, the user is presented with a return button to return to the game and play again and is automatically forwarded to the game section, skipping the landing page and having to enter a username.
 - Button to return to landing page and enter a new username.
@@ -313,6 +316,9 @@ The JavaScript passed through the JSHint Validator without errors:
 | Bug                                      | Description                                                                                                                                                            | Solution                                                                                                                                                                           | Result   |
 |------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | Storing collected username in a variable | If the username was retrieved from local storage and stored in a variable the most updated value was not displayed to the user but the value from two sessions before. | The username value is retrieved directly from local storage to display in the personalized message at game completion. I did not have time to solve it before submission deadline. | Unsolved |
+| Attribute autocomplete                   | Issue shown on Dev Tools console            
+
+![Issue console](/documentation/issue-console.png)
 
 ### Resolved Bugs
 

@@ -122,7 +122,6 @@ function playGame() {
   landingSection.style.display = "none";
   gameSection.style.display = "block";
   completedSection.style.display = "none";
-  console.log("play game function activated");
 }
 
 // Generate random computer choice
