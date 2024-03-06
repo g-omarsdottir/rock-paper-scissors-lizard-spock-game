@@ -312,7 +312,7 @@ The JavaScript passed through the JSHint Validator without errors:
 
 ### Known Bugs
 
-
+There are no known bugs.
 
 ### Resolved Bugs
 
