@@ -209,6 +209,7 @@ Web Accessibility was ensured by:
 - To ensure the logical and undisturbed flow of the game, no alternative text was added for the background images of the choice buttons and the fontawesome icons depicting the hand gestures used when the game is played in person.
 - The dynamic content was emphasized using `aria-live=”polite”`.
 - The current scores were not attributed with `aria-live=”polite”` because this stirred the natural flow of the game.
+- The rules were not read by the screen reader used for testing. Since the rules are essential to the game, a visibly hidden text for screen readers only were added, even if it means that the rules may be read twice by some screen readers. 
 - Formatting: the text was not justified to ensure readability for persons with reading disorders.
 - The colors for background and text were chosen for maximum readability and tested with color contrast checker.
 - The username form to submit the username has the appropriate label. 
