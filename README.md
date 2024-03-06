@@ -282,6 +282,8 @@ The website passed through the WAVE Web Accessibility Evaluation Tool validator 
 
 ### Manual Testing
 
+Manual tests were performed on the deployed website.
+
 | Feature                | Test case                                                                        | Outcome                                                                                                  |
 |------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Heading anchor element | Click on heading                                                                 | Navigates to landing page                                                                                |
