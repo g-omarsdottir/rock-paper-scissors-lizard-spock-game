@@ -65,6 +65,16 @@ button:active {
     margin: 20px;
 }
 
+/* For screen reader only for improved web accessibility. */
+.sr-only{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 /*LANDING PAGE SECTION*/
 #landing-section {
     margin: 50px;

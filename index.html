@@ -53,24 +53,24 @@
             <div id="landing-section" class="box">
 
                 <!-- Welcome message -->
-                <h2>Welcome, future RPSLS overlord!</h2>
+                <h2 role="heading" aria-level="2">Welcome, future RPSLS overlord!</h2>
                 <!-- Introduction of game -->
                 <div>
-                    <h3>About this Game</h3>
+                    <h3 role="heading" aria-level="3">About this Game</h3>
                     <p>
                         The game Rock, Paper, Scissors, Lizard, Spock, often referred to as the RPSLS-Game for
                         short, is just like the old classic
                         <a href="https://en.wikipedia.org/wiki/Rock_paper_scissors" target="_blank" rel="noopener"
-                            aria-label="Click here to read more about the origin of the game (opens in a new tab)">
-                            "Rock, Paper, Scissors" game
-                        </a>,
+                            aria-label="Wikipedia article about the original game (opens in a new tab)">
+                            "Rock, Paper, Scissors" game,
+                        </a>
                         but with a twist: a Lizard and Spock!
                     </p>
                     <p>
                         You may know this game from
                         <a href="https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock"
                             target="_blank" rel="noopener"
-                            aria-label="Click here to read more about the game on the TV sitcom Big Bang Theory (opens in a new tab)">
+                            aria-label="Article about the origin of the game (opens in a new tab)">
                             the TV sitcom The Big Bang Theory.</a> If you don't, no worries, just keep reading, we've
                         got you covered.
                     </p>
@@ -78,7 +78,7 @@
 
                 <!-- Instructions how to play the game -->
                 <div>
-                    <h3>How to Play</h3>
+                    <h3 role="heading" aria-level="3">How to Play</h3>
                     <p>
                         Choose one of the five options, Rock, Paper, Scissors, Lizard, or Spock by clicking on
                         the appropriate button.
@@ -110,7 +110,7 @@
 
                 <!-- Game rules -->
                 <div>
-                    <h3>Game Rules</h3>
+                    <h3 role="heading" aria-level="3">Game Rules</h3>
                     <div id="rules">
                         <ul>
                             <li>Scissors cut Paper</li>
@@ -159,6 +159,9 @@
                     <div id="scoreboard-box">
                         <div id="user-box">
                             <div>
+                                <p class="sr-only">
+                                    User scoreboard, displays the current user score and game choice, updated dynamically.
+                                </p>
                                 <p id="username-display">
                                     User
                                 </p>
@@ -173,6 +176,9 @@
                         </div>
                         <div id="computer-box">
                             <div>
+                                <p class="sr-only">
+                                    Computer scoreboard, displays the computer's current score and game choice, updated dynamically.
+                                </p>
                                 <p>
                                     Computer
                                 </p>
@@ -190,28 +196,32 @@
 
                 <!-- Display game results of each round using JavaScript innerHTML -->
                 <div>
+                    <p class="sr-only">Game results section, updates each round.</p>
                     <div id="result-box" class="box">
-                        <p id="result">
+                        <p id="result" aria-live="polite">
                         </p>
                     </div>
                 </div>
 
                 <!-- Choice buttons to play game -->
                 <div>
+                    <p class="sr-only">Interactive game buttons section. Each button displays a background image of the game
+                        variable, for example an image of a lizard or a rock, and an icon of the hand gesture used when
+                        the game is played in person.</p>
                     <div id="button-box">
-                        <button id="rock" class="choice-button">
+                        <button id="rock" class="choice-button" type="button">
                             <span>Rock</span> <i class="fa-regular fa-hand-back-fist"></i>
                         </button>
-                        <button id="paper" class="choice-button">
+                        <button id="paper" class="choice-button" type="button">
                             <span>Paper</span> <i class="fa-regular fa-hand"></i>
                         </button>
-                        <button id="scissors" class="choice-button">
+                        <button id="scissors" class="choice-button" type="button">
                             <span>Scissors</span> <i class="fa-regular fa-hand-scissors"></i>
                         </button>
-                        <button id="lizard" class="choice-button">
+                        <button id="lizard" class="choice-button" type="button">
                             <span>Lizard</span> <i class="fa-regular fa-hand-lizard"></i>
                         </button>
-                        <button id="spock" class="choice-button">
+                        <button id="spock" class="choice-button" type="button">
                             <span>Spock</span> <i class="fa-regular fa-hand-spock"></i>
                         </button>
                     </div>
@@ -222,9 +232,9 @@
             <div id="completed-section">
                 <div class="box">
                     <div>
-                        <h2>Thank you for playing!</h2>
+                        <h2 role="heading" aria-level="2">Thank you for playing!</h2>
                         <!-- Display final score using JavaScript innerHTML -->
-                        <p id="final-score">
+                        <p id="final-score" aria-live="polite">
                         </p>
                         <!-- Display final game results and declare winner/loser using JavaScript innerHTML -->
                         <p id="final-result">
@@ -239,7 +249,8 @@
                         </div>
                     </div>
                     <div>
-                        <h3>Otherwise, <span>"live long and prosper" <span></span> <i
+                        <h3>Otherwise, <span>"live long and prosper" <span
+                                    aria-labelledby="Icon showing Spock's signature hand gesture"></span> <i
                                     class="fa-regular fa-hand-spock"></i></span></h3>
                     </div>
                 </div>
