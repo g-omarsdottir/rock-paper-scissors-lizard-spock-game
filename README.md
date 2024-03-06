@@ -128,15 +128,15 @@ The choice buttons for the game variables are placed at the flex-bottom. The use
 The wireframes show designs for desktop and mobile devices. The website is responsive on all screen sizes.
 1. Landing Page Section
 
-![Landing Page Mobile](/documentation/landing-page.png)
+![Landing Page](/documentation/landing-page.png)
 
 2. Game Section
 
-![Game Page Desktop](/documentation/game-page.png)
+![Game Page](/documentation/game-page.png)
 
 3. Game Completion Section
 
-![End Page Desktop](/documentation/end-page.png)
+![End Page](/documentation/end-page.png)
 
 ## Features
 - The website is responsive on all devices and screen sizes.
