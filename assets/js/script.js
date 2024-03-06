@@ -107,7 +107,7 @@ document.getElementById("play-again").addEventListener("click", function () {
 // Event listener for return to landing page section at game completion
 document.getElementById("return-home").addEventListener("click", function () {
   setTimeout(() => {
-    window.location.href = "index.html"
+    window.location.href = "index.html";
   }, 500);
 });
 
@@ -159,7 +159,6 @@ function updateChoiceElements(userChoiceElement, computerChoiceElement, userChoi
 // Function to update the displayed game result (win, lose, tie) in the DOM.
 function updateResultElement(result) {
   document.getElementById("result").innerHTML = result;
-  console.log(result);
 }
 
 // Functions for game results of each round according to comparison of choices (compareChoices) for user feedback.
