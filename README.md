@@ -12,9 +12,9 @@ This is an easy and enjoyable game that requires no previous knowledge and is pl
 
 ### How to play the game:
 
-Both players, the user and the computer, make their move similtaniously by choosing one of the five variables. The user chooses a variable by clicking on a button while the computer's choice is randomly generated. This makes it impossible for the user to develop a strategy to foresee the opponent’s choice based on his or her previous behavior. 
+Both players, the user and the computer, make their move simultaneously by choosing one of the five variables. The user chooses a variable by clicking on a button while the computer's choice is randomly generated. This makes it impossible for the user to develop a strategy to foresee the opponent’s choice based on his or her previous behavior. 
 
-The rules are explained on the website in text form and as an illustration displaying which varaiable beats which. The winner of each round scores 1 point. It both players choose the same variable, it’s a tie and neither one gains a point.  After either one of the players, the user or the computer, has won 10 rounds, i.e. gained 10 points, the game is completed.
+The rules are explained on the website in text form and as an illustration displaying which variable beats which. The winner of each round scores 1 point. It both players choose the same variable, it’s a tie and neither one gains a point.  After either one of the players, the user or the computer, has won 10 rounds, i.e. gained 10 points, the game is completed.
 
 ### Rules
 
@@ -26,11 +26,11 @@ The RPSLS-Game was originally created by Sam Kass with Karen Brylan, who introdu
 
 The game became quite popular after being broadcasted the TV sitcom [The Big Bang Theory](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock).  
 
-The game can also be played in person using hand gestures. The player's count to three and depict their choices similtaniously  with hand gestures that represent the respective variable, e.g. a fist form a rock, the index and middle fingers form scissors, etc. The hand gestures are depicted on the buttons in the game section of the website. Being familiar with the character Spock certainly comes in handy here, since this particular hand gesture usually takes quite some practice to achieve.
+The game can also be played in person using hand gestures. The player's count to three and depict their choices simultaneously with hand gestures that represent the respective variable, e.g. a fist form a rock, the index and middle fingers form scissors, etc. The hand gestures are depicted on the buttons in the game section of the website. Being familiar with the character Spock certainly comes in handy here, since this particular hand gesture usually takes quite some practice to achieve.
 
 ## Table of Contents
 
-- [Poject and Site Owner Goals](#project-and-site-owner-goals)
+- [Project and Site Owner Goals](#project-and-site-owner-goals)
 - [User Experience](#user-experience)
 - [Design](#design)
 - [Features](#features)
@@ -46,7 +46,7 @@ The game can also be played in person using hand gestures. The player's count to
 - [Credits](#credits)
 
 ## Project and Site Owner Goals
-- The goal is to create an easy and enjoyable game that requires no previous knowledge. Since the game is played against the computer, the user does not require a counterpart and can play whenever and wherever on all screensizes, mobile and desktop devices.
+- The goal is to create an easy and enjoyable game that requires no previous knowledge. Since the game is played against the computer, the user does not require a counterpart and can play whenever and wherever on all screen sizes, mobile and desktop devices.
 
 ## User Experience
 
@@ -76,7 +76,7 @@ As a frequent visitor,
     - if it is indeed impossible to foresee the computer's next play move or if I can detect a pattern.
 
 ## Design
-The game was designed for mobile devices with a minimum width of 320px first. The styles were then adjusted to larger mobile device screens, tablets and desktop screens. The game is responsive on all screensizes. 
+The game was designed for mobile devices with a minimum width of 320px first. The styles were then adjusted to larger mobile device screens, tablets and desktop screens. The game is responsive on all screen sizes. 
 
 ### Imagery
 The buttons to play the game display an image of the variable they represent.  
@@ -87,7 +87,7 @@ The buttons to play the game display an image of the variable they represent.
     ![Color-palette](/documentation/colors.png)
 
 - #F9F5C6 as background color. The color is easy on the eyes while ensuring excellent color contrast with the dark text color for readability web accessibility.
-- #060A39 as font color and border color. The color was suggested on [Artyclick.com](https://colors.artyclick.com/color-shades-finder/?color=#F9F5C6) as a complementary color to the background color. The color provides excellent contrast for readibility web accessibility whithout being harsh on the eyes.
+- #060A39 as font color and border color. The color was suggested on [Artyclick.com](https://colors.artyclick.com/color-shades-finder/?color=#F9F5C6) as a complementary color to the background color. The color provides excellent contrast for readability and web accessibility without being harsh on the eyes.
 - #D9EE3E (transparent version) as background color for buttons to start game ('Submit Username & Play Game*; 'Play Again').
 - #7B8246 (transparent version) for hover effect of buttons.
 - #FFF as background of images for choice buttons.
@@ -109,7 +109,7 @@ Testing results of color contrast checks for readability and web accessibility:
     ![Button color contrast report](/documentation/contrast-button.png)
 
 ### Fonts
-Both font types were chosen after reseaching online, which fonts are popular to use in computer-games, while offering excellent readability for improved web accessibility.
+Both font types were chosen after researching online, which fonts are popular to use in computer-games, while offering excellent readability for improved web accessibility.
 - Play, sans-serif, were used for headings and buttons to play the game. The font has a fun computer-game like touch.
 - Work Sans, sans-serif, was used for all other text.
 - Fontawesome were applied for a playful touch and visually complement the game buttons, as well as the farewell greeting quoting the character Spock, displaying his signature hand sign.
@@ -120,7 +120,7 @@ The website is a single page devided tino 3 sections: landing page section, game
 The website was designed first for mobile devices, i.e. smaller screens and the step wise progressed to large mobile devices, tablets, and desktops. Design was targeted and adapted to larger screens by applying CSS media queries. A quick search online gave a rough overview of which screen sizes are popular and which are no longer in use. 
 
 Mobile Device
-The choice buttons for the game variables are placed at the flex-bottom. The user can conveniently reach all buttons using the thumb while securily holding the mobile device in one hand.
+The choice buttons for the game variables are placed at the flex-bottom. The user can conveniently reach all buttons using the thumb while securely holding the mobile device in one hand.
 
 ![Layout Map](/documentation/layout-map.png)
 
@@ -169,7 +169,7 @@ The wireframes show designs for desktop and mobile devices. The website is respo
     - Introduction of the game and its origin
     - Instructions on how to play the game
     - Game rules that establish the criteria for winning and the victor of each round.
-    - Input field for username (pseudonym of user's choice) to display in a personalized message after user has completed the game. Efter entering a username within the limit of 10 charachters and clicking submit, the user it automatically forwared to the game section.
+    - Input field for username (pseudonym of user's choice) to display in a personalized message after user has completed the game. After entering a username within the limit of 10 characters and clicking submit, the user it automatically forwarded to the game section.
 - The username is store with JavaScript local storage to display in a personalized message after game completion.
 - The sections are displayed alternately to user according to a logical flow of a game website and the other sections are visibly hidden.
 - A footer is not necessary.
@@ -183,10 +183,10 @@ The wireframes show designs for desktop and mobile devices. The website is respo
     - the choice each player made, in case the user forgets which buttons was pushed
 - A field for game results announcing the winner of the round and explanation why the choice won referencing the rules.
 - Game buttons with user choices (predefined variables introduced in the game rules) to play the game.
-- The game ends when one player, user or computer, has won 10 rounds, i.e. gained 10 scorepoints.
+- The game ends when one player, user or computer, has won 10 rounds, i.e. gained 10 score points.
 
 3. Game Completion Section
-- Scoreboard displaying the end score of user. The end score is not always the same, since the computer can win, too.
+- Scoreboard displaying the end score of the user. The end score is not always the same, since the computer can win, too.
 - If user wins, a personalized message containing the username provided the landing page section to congratulate the user is displayed.
 - If user loses, a personalized message to console the user to try again is displayed.
 - Button to play the game again. The user returns directly to game section and skips the landing page for a better user experience. 
@@ -197,17 +197,17 @@ The wireframes show designs for desktop and mobile devices. The website is respo
 - Option to switch between ligt and dark mode.
 
 ## Accessibility 
-Web Accessibility was ensured by
+Web Accessibility was ensured by:
 - Using semantic HTML elements to structure the content of each section.
 - Applying alternative text to the only image used, the illustration of the game rules.
 - Thoroughly testing the website using a screen reader test all interactive elements using keyboard focus to improve user experience using assisting technology.
 - Adding visibly hidden text for screen readers only for a structured overview of the game section and additional description where needed.
 - This was necessary because some content is dynamically displayed using JavaScript and is not present from the beginning.
 - To ensure the logical and undisturbed flow of the game, no alternative text was added for the background images of the choice buttons and the fontawesome icons depicting the hand gestures used when the game is played in person.
-- The dynamic content was emphesized using `aria-live=”polite”`.
+- The dynamic content was emphasized using `aria-live=”polite”`.
 - The current scores were not attributed with `aria-live=”polite”` because this stirred the natural flow of the game.
-- Formatting: the text was not justified to ensure readibility for persons with reading disorders.
-- The colors for background and text were chosen for maximum readibility and tested with color contrast checker.
+- Formatting: the text was not justified to ensure readability for persons with reading disorders.
+- The colors for background and text were chosen for maximum readability and tested with color contrast checker.
 - The username form to submit the username has the appropriate label. 
 - The website was tested with an accessibility validator.
 
@@ -222,7 +222,7 @@ Web Accessibility was ensured by
 - [GitHub](https://github.com/) to store code files and deploy website.
 - [Git](https://git-scm.com/) for version control.
 - [Gitpod](https://www.gitpod.io/) as a Cloud Development Environment (CDE).
-- [Google Chrome developer tools](https://developer.chrome.com/docs/devtools) to analize code, identify possible issues, temporarily edit code and test responsiveness on various sizes.
+- [Google Chrome developer tools](https://developer.chrome.com/docs/devtools) to analyze code, identify possible issues, temporarily edit code and test responsiveness on various sizes.
 - [JSFiddle](https://jsfiddle.net/) to create and test JavaScript functions without affecting the actual code.
 - [Code Institue template](https://github.com/Code-Institute-Org/gitpod-full-template) for Gitpod and this README.
 - [Diffchecker.com](https://www.diffchecker.com/) to compare versions for troubleshooting.
@@ -287,7 +287,7 @@ The JavaScript passed through the JSHint Validator without errors:
 | Buttons                | Click choice buttons                                                             | Scores incremented                                                                                       |
 | Button Play Again      | Click button                                                                     | user navigates to game section                                                                           |
 | Button Return to Home  | user navigates to landing page section                                           |                                                                                                          |
-| Screen reader          | Perform all aforementioned tests using screenreader                              | Add attributes to improve use with assisting technology (see section accessibility)                      |
+| Screen reader          | Perform all aforementioned tests using screen reader                              | Add attributes to improve use with assisting technology (see section [accessibility](#accessibility))                      |
 | Use keyboard control   | Use tab key to navigate between links (header - articles - username input field) | successful                                                                                               |
 | Use Keyboard control   | Open links using enter key                                                       | successful                                                                                               |
 | Use Keyboard control   | Submit username using enter key                                                  | successful                                                                                               |
