@@ -30,20 +30,27 @@ The game can also be played in person using hand gestures. The player's count to
 
 ## Table of Contents
 
+- [Poject and Site Owner Goals](#project-and-site-owner-goals)
+- [User Experience](#user-experience)
+- [Design](#design)
+- [Features](#features)
+- [Accessibility](#accessibility)
+- [Technology Used](#technology-used)
+- [Testing](#testing)
+    - [Validator Testing](#validator-testing)
+    - [Manual Testing](#manual-testing)
+- [Bugs](#bugs)
 - [Deployment and Local Development](#deployment-and-local-development-1)
-- [Deployment](#deployment-1)
-    - [Deployment using GitHub pages](#deployment-using-github-pages-1)
-- [Local Development](#local-development-1)
-    - [Local Clone](#local-clone-1)
-    - [Fork](#fork-1)
-
+    - [Deployment](#deployment-1)
+    - [Local Development](#local-development-1)
+- [Credits](#credits)
 
 ## Project and Site Owner Goals
 - The goal is to create an easy and enjoyable game that requires no previous knowledge. Since the game is played against the computer, the user does not require a counterpart and can play whenever and wherever on all screensizes, mobile and desktop devices.
 
 ## User Experience
 
-## Target Audience
+### Target Audience
 - People who enjoy playing online games. 
 - People who don't have or do not wish to have a counterpart to play with.
 - Fans of the sitcom The Big Bang Theory.
@@ -149,7 +156,6 @@ The wireframes show designs for desktop and mobile devices. The website is respo
         - Choice buttons additionally get a thicker border and larger font size.
     - Active: a box-shadow for 3D effect when button is pushed.
 
-
 ### Interactive Elements
 - Input element for username. The user cannot move forward to playing game without entering a username. 
 - Buttons to choose which variable the user wants to play for each round.
@@ -181,8 +187,6 @@ to-do:    A link to access the rules again, which open in a new window / OR blen
 - If user wins, a personalized message containing the username provided the landing page section to congratulate the user is displayed.
 - If user loses, a personalized message to console the user to try again is displayed.
 - Button to play the game again. The user returns directly to game section and skips the landing page for a better user experience. 
-
-
 
 ### Features Left to Implement
 - Option to switch between ligt and dark mode.
@@ -232,7 +236,7 @@ The CSS passed through the official W3C CSS Validator without erros: [W3C CSS Va
 
 ![css-validator-results](/documentation/css-validator.png)
 
-### JavaScript
+#### JavaScript
 
 The JavaScript passed through the JSHint Validator without errors:
 
@@ -249,7 +253,7 @@ The JavaScript passed through the JSHint Validator without errors:
     ![lighthouse-report-mobile](/documentation/lighthouse-mobile.png)
 
 - #### WAVE Web Accessibility Evaluation Tool
-### Manual Testing
+- ### Manual Testing
 - #### Testing User Stories
 - #### Full Testing
 
