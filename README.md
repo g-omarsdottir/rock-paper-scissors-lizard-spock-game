@@ -162,8 +162,6 @@ The wireframes show designs for desktop and mobile devices. The website is respo
         - Choice buttons additionally get a thicker border and larger font size.
     - Active: a box-shadow for 3D effect when button is pushed.
 
-
-
 ### General Features of Each Page
 - Landing page
 - The landing page contains 
@@ -199,6 +197,19 @@ The wireframes show designs for desktop and mobile devices. The website is respo
 - Option to switch between ligt and dark mode.
 
 ## Accessibility 
+Web Accessibility was ensured by
+- Using semantic HTML elements to structure the content of each section.
+- Applying alternative text to the only image used, the illustration of the game rules.
+- Thoroughly testing the website using a screen reader test all interactive elements using keyboard focus to improve user experience using assisting technology.
+- Adding visibly hidden text for screen readers only for a structured overview of the game section and additional description where needed.
+- This was necessary because some content is dynamically displayed using JavaScript and is not present from the beginning.
+- To ensure the logical and undisturbed flow of the game, no alternative text was added for the background images of the choice buttons and the fontawesome icons depicting the hand gestures used when the game is played in person.
+- The dynamic content was emphesized using `aria-live=”polite”`.
+- The current scores were not attributed with `aria-live=”polite”` because this stirred the natural flow of the game.
+- Formatting: the text was not justified to ensure readibility for persons with reading disorders.
+- The colors for background and text were chosen for maximum readibility and tested with color contrast checker.
+- The username form to submit the username has the appropriate label. 
+- The website was tested with an accessibility validator.
 
 ## Technology Used
 
@@ -259,12 +270,43 @@ The JavaScript passed through the JSHint Validator without errors:
 
     ![lighthouse-report-mobile](/documentation/lighthouse-mobile.png)
 
-- #### WAVE Web Accessibility Evaluation Tool
-- ### Manual Testing
-- #### Testing User Stories
+#### WAVE Web Accessibility Evaluation Tool
+
+
+### Manual Testing
+
+| Feature                | Test case                                                                        | Outcome                                                                                                  |
+|------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| Heading anchor element | Click on heading                                                                 | Navigates to landing page                                                                                |
+| Link                   | Click on Link *Rock Paper Scissors game*                                         | Link opens in a new window: Wikipedia article about the original game                                    |
+| Link                   | Click on link  *the TV sitcom The Big Bang Theory*                               | Link opens in a new window: Fandom article about the origin and history of the game                      |
+| Username input field   | Submit invalid username: more than 10 characters                                 | Browser alert informing the user that the username is invalid and shows the criteria of a valid username |
+| Username input field   | Submit with empty field                                                          | Form alert is displayed and form submission prevented                                                    |
+| Submit button          | Submit valid username                                                            | Navigates to game section                                                                                |
+| Buttons                | Click choice buttons                                                             | Result message displayed                                                                                 |
+| Buttons                | Click choice buttons                                                             | Scores incremented                                                                                       |
+| Button Play Again      | Click button                                                                     | user navigates to game section                                                                           |
+| Button Return to Home  | user navigates to landing page section                                           |                                                                                                          |
+| Screen reader          | Perform all aforementioned tests using screenreader                              | Add attributes to improve use with assisting technology (see section accessibility)                      |
+| Use keyboard control   | Use tab key to navigate between links (header - articles - username input field) | successful                                                                                               |
+| Use Keyboard control   | Open links using enter key                                                       | successful                                                                                               |
+| Use Keyboard control   | Submit username using enter key                                                  | successful                                                                                               |
+| Use Keyboard control   | Close browser alert window using enter key                                       | successful                                                                                               |
+| Use keyboard control   | Activate link in header to navigate to landing page using enter key              | Successful                                                                                               |
+| Use keyboard control   | Press choice buttons using enter key `type=”button”` was missing                 | Successful after adding attribute                                                                        |
+| Use keyboard control   | Press buttons on completed section *Play Again* and *Return to Home*             | successful                                                                                               |
+| Pseudo-class hover     | Test hover effect on desktop version                                             | successful                                                                                               |
+| Pseudo-class           | active Test active effect on buttons on desktop and mobile version               | successful                                                                                               |
+
+#### Testing User Stories
+
+- The game was tested by friends and family on various mobile devices, iPhone and Android, and desktop using Windows, iOS. 
+- No issues were reported.
+
 - #### Full Testing
 
 ## Bugs
+
 ### Known Bugs
 
 
