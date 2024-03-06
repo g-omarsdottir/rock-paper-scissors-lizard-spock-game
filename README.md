@@ -139,16 +139,22 @@ The wireframes show designs for desktop and mobile devices. The website is respo
 ![End Page Desktop](/documentation/end-page.png)
 
 ## Features
--  The website is responsive on all devices and screen sizes.
-- The user lands on a landing page. 
-- After entering and submitting a username, the user is automatically forwarded to the game section.
-- The Header is linked/anchored to the landing page.
-
-- After completing the game, the user has the option to 
-    - return to game page to play again, skipping the landing page and having to enter a username again, or
-    - return to home, navigates to landing page.
-
+- The website is responsive on all devices and screen sizes.
+- The user lands on the landing page. 
+- The Header is linked/anchored to the landing page, so the user can return to home at all times.
 - The user does not have the option to navigate between the website sections, except for navigate to landing page by clicking the anchored header.
+
+### Interactive Elements
+- Input element for username. The user cannot move forward to playing game without entering a username. 
+- The username must meet a criteria: consist of characters between one and 10
+    - If the user enters an invalid username, the user is informed
+    - Less than 1 character: alert 
+    - More than 10 characters: alert
+        - Input field is cleared automatically
+
+- Buttons to choose which variable the user wants to play for each round.
+- Button to return to game and play again. After completing the game, the user is presented with a return button to return to the game and play again and is automatically forwarded to the game section, skipping the landing page and having to enter a username.
+- Button to return to landing page and enter a new username.
 - All buttons have a pseudo-class for active and hover to give users feedback when a button is pushed.
     - Hover/mouse-over, i.e. when the mouse curser hovers over the buttons:
         - Slight change of background color.
@@ -156,11 +162,7 @@ The wireframes show designs for desktop and mobile devices. The website is respo
         - Choice buttons additionally get a thicker border and larger font size.
     - Active: a box-shadow for 3D effect when button is pushed.
 
-### Interactive Elements
-- Input element for username. The user cannot move forward to playing game without entering a username. 
-- Buttons to choose which variable the user wants to play for each round.
-- Button to return to game and play again. After completing the game, the user is presented with a return button to return to the game and play again and is automatically forwarded to the game section.
-to-do:    A link to access the rules again, which open in a new window / OR blend rules in and out when clicked and then return to game button so that the game can resume.
+
 
 ### General Features of Each Page
 - Landing page
@@ -174,12 +176,15 @@ to-do:    A link to access the rules again, which open in a new window / OR blen
 - The sections are displayed alternately to user according to a logical flow of a game website and the other sections are visibly hidden.
 - A footer is not necessary.
 
-
 2. Game Section
 - This is the essence of the website, where user plays the game.
-- Scoreboard displaying current scores of user and computer.
-- Game buttons with user choices (predefined variables introduced in the game rules) to play the game.
 - The user plays against the computer. The computer's choice is randomly generated.
+- Scoreboard displaying two fields for the user and the computer
+    - The user's chosen username
+    - current score
+    - the choice each player made, in case the user forgets which buttons was pushed
+- A field for game results announcing the winner of the round and explanation why the choice won referencing the rules.
+- Game buttons with user choices (predefined variables introduced in the game rules) to play the game.
 - The game ends when one player, user or computer, has won 10 rounds, i.e. gained 10 scorepoints.
 
 3. Game Completion Section
@@ -187,6 +192,8 @@ to-do:    A link to access the rules again, which open in a new window / OR blen
 - If user wins, a personalized message containing the username provided the landing page section to congratulate the user is displayed.
 - If user loses, a personalized message to console the user to try again is displayed.
 - Button to play the game again. The user returns directly to game section and skips the landing page for a better user experience. 
+- Button to return to home, navigates to the landing page.
+- A famous quote from the character Spock showing his signature hand gesture.
 
 ### Features Left to Implement
 - Option to switch between ligt and dark mode.
