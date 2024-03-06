@@ -375,6 +375,7 @@ button:active {
 
     #button-box {
         width: 600px;
+        margin-bottom: 40px;
     }
 }
 
@@ -403,6 +404,7 @@ button:active {
 
     #button-box {
         width: 50%;
+        margin-bottom: 40px;
     }
 }
 
@@ -410,5 +412,6 @@ button:active {
 @media screen and (min-width: 1200px) {
     #button-box {
         width: 35%;
+        margin-bottom: 60px;
     }
 }
