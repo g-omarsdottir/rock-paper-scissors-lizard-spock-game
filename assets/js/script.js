@@ -1,7 +1,6 @@
 // Variables for landing page: to collect username at form submission and store in local storage.
 let usernameInput = document.getElementById("username-input"); // Reference for validation of username. 
 let username = document.getElementById("username-display");
-username.textContent = localStorage.getItem(username); // Display username in the scoreboard.
 let usernameForm = document.getElementById("username-form"); // Reference of submission form for event listener "submit".
 
 // Variables for game section: Game variables array, possible choices for playing game.
@@ -114,7 +113,7 @@ document.getElementById("return-home").addEventListener("click", function () {
 
 // Function to collect username and and store in local storage.
 function collectUsername() {
-  localStorage.setItem(username, usernameInput.value); // To store the username in local storage.
+  localStorage.setItem("username", usernameInput.value); // Stores the username in local storage.
 }
 
 // Display game section (user sees buttons and can play game) and hide the landing page section and game completed section for a logical flow of the website/game.
@@ -122,6 +121,7 @@ function playGame() {
   landingSection.style.display = "none";
   gameSection.style.display = "block";
   completedSection.style.display = "none";
+  username.innerHTML = localStorage.getItem("username");
 }
 
 // Generate random computer choice
@@ -211,10 +211,10 @@ function completedGame() {
   completedSection.style.display = "block";
   if (userScore === 10) {
     finalUserScore.innerHTML = "Your score: " + userScore;
-    finalResultMessage.innerHTML = "Congratulations, " + localStorage.getItem(username) + ", <br>" + "you win!";
+    finalResultMessage.innerHTML = "Congratulations, " + localStorage.getItem("username") + ", <br>" + "you win!";
   } else {
     finalUserScore.innerHTML = "Your score: " + userScore;
-    finalResultMessage.innerHTML = "Too bad, " + localStorage.getItem(username) + ", <br>" + "you lost this time around." + "<br>" + "Better luck next time!";
+    finalResultMessage.innerHTML = "Too bad, " + localStorage.getItem("username") + ", <br>" + "you lost this time around." + "<br>" + "Better luck next time!";
   }
 }
 
