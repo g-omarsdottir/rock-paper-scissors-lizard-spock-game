@@ -157,8 +157,9 @@ function updateChoiceElements(userChoiceElement, computerChoiceElement, userChoi
 }
 
 // Function to update the displayed game result (win, lose, tie) in the DOM.
-function updateResultElement(resultElement, result) {
-  resultElement.innerHTML = result;
+function updateResultElement(result) {
+  document.getElementById("result").innerHTML = result;
+  console.log(result);
 }
 
 // Functions for game results of each round according to comparison of choices (compareChoices) for user feedback.
@@ -166,19 +167,19 @@ function userWins(userChoice, computerChoice) {
   incrementUserScore();
   const reason = winConditions[userChoice][computerChoice];
   const resultMessageWins = userChoice + " " + reason + " " + computerChoice + "!" + "<br>" + " You win!";
-  updateResultElement(result, resultMessageWins);
+  updateResultElement(resultMessageWins);
 }
 
 function userTies(userChoice, computerChoice) {
   const resultMessageTies = userChoice + " " + "equals" + " " + computerChoice + "!" + "<br>" + "It's a tie! Everybody wins!";
-  updateResultElement(result, resultMessageTies);
+  updateResultElement(resultMessageTies);
 }
 
 function userLoses(userChoice, computerChoice) {
   incrementComputerScore();
   const reason = winConditions[computerChoice][userChoice];
   const resultMessageLoses = computerChoice + " " + reason + " " + userChoice + "!" + "<br>" + " You lose!";
-  updateResultElement(result, resultMessageLoses);
+  updateResultElement(resultMessageLoses);
 }
 
 // Function to compare choices based on game rules to decide which variable wins the round.
