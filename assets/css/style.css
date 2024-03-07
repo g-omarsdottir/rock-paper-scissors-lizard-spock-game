@@ -66,7 +66,7 @@ button:active {
 }
 
 /* For screen reader only for improved web accessibility. */
-.sr-only{
+.sr-only {
     position: absolute;
     left: -10000px;
     top: auto;
@@ -109,8 +109,12 @@ button:active {
     text-align: right;
     flex-wrap: wrap;
     border: 2px groove #7B8246;
+    box-shadow: 0 3px 3px rgba(217, 238, 62);
+    /* 3D effect */
     border-radius: 10px;
     padding: 20px 10px;
+    max-width: 400px;
+    margin: auto;
 }
 
 #username-input {
@@ -315,7 +319,7 @@ button:active {
     }
 
     #button-box {
-        max-width: 450px;
+        max-width: 400px;
     }
 }
 
@@ -335,6 +339,11 @@ button:active {
         padding-top: 20px;
     }
 
+    #rules-img {
+        max-width: 370px;
+        margin: 30px auto;
+    }
+
     #username-box {
         margin-bottom: 20px;
     }
@@ -349,33 +358,12 @@ button:active {
         width: 250px;
         font-size: 1em;
     }
-
-    #result-box {
-        width: 60%;
-        height: 200px;
-    }
-
-    #button-box {
-        width: 80%;
-        margin: auto;
-    }
 }
 
 /* Media query: screens ≥ 768px (tablets) */
 @media screen and (min-width: 768px) {
     h1 {
         font-size: 1.7rem;
-    }
-
-    #username-box {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    #button-box {
-        width: 600px;
-        margin-bottom: 40px;
     }
 }
 
@@ -402,16 +390,8 @@ button:active {
         background-color: rgba(186, 196, 106, 0.795);
     }
 
-    #button-box {
-        width: 50%;
-        margin-bottom: 40px;
-    }
-}
-
-/* Media query: screens ≥1200px (large desktops)*/
-@media screen and (min-width: 1200px) {
-    #button-box {
-        width: 35%;
-        margin-bottom: 60px;
+    #landing-section {
+        max-width: 890px;
+        margin: auto;
     }
 }
