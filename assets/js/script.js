@@ -23,8 +23,8 @@ const winConditions = {
     Spock: "disproves"
   },
   Scissors: {
-    Paper: "cuts",
-    Lizard: "decapitates"
+    Paper: "cut",
+    Lizard: "decapitate"
   },
   Lizard: {
     Spock: "poisons",
