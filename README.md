@@ -10,6 +10,14 @@ This is an easy and enjoyable game that requires no previous knowledge and is pl
 
 [View the live project here.](https://g-omarsdottir.github.io/rock-paper-scissors-lizard-spock-game/)
 
+![Static Badge Last Commit](https://img.shields.io/badge/last_commit-March_2024-green)
+![Static Badge Contributors](https://img.shields.io/badge/contributors-1-pink)
+![Static Badge languages](https://img.shields.io/badge/languages-4-blue)
+![Static Badge HTML](https://img.shields.io/badge/html-37.1%25-red)
+![Static Badge JavaScript](https://img.shields.io/badge/JavaScript-27.1%25-yellow)
+![Static Badge CSS](https://img.shields.io/badge/css-22.3%25-violet)
+![Static Badge w3c](https://img.shields.io/badge/w3c-validated-orange)
+
 ### How to play the game:
 
 Both players, the user and the computer, make their move simultaneously by choosing one of the five variables. The user chooses a variable by clicking on a button while the computer's choice is randomly generated. This makes it impossible for the user to develop a strategy to foresee the opponent’s choice based on his or her previous behavior. 
@@ -522,4 +530,6 @@ To fork the repository:
 ### Acknowledgements
 
 - My mentor, Mitko Bachvarov, for guidance and valuable advice.
+- My friend, Stephan Reich, for support in troubleshooting.
+- My fellow students at Code Institute, especially Amir Shkolnik and Niclas Hugdahl, for testing and proofreading.
 - The Slack community for information and motivation.
