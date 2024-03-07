@@ -388,12 +388,13 @@ To fork the repository:
 
 ### Content
 
-- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage ) for local storage, i.e. store and retrieve username value.
 - [W3 schools](https://www.w3schools.com/jsref/prop_text_value.asp) for displaying username value in personalized user feedback.
+- [W3 schools](https://www.w3schools.com/jsref/jsref_trim_string.asp)
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage ) for local storage, i.e. store and retrieve username value.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) for default behavior of HTML attribute *type"submit"* and overwrite this with *type="button"* to script event handlers in JavaScript. See [Bugs](#resolved-bugs) for details of possible complications using each attribute. 
 - [Delay with setTimout()](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) to display the visual feedback of pushing submit and play button for improved UX.  
 - [inclusive-components.design](https://inclusive-components.design/toggle-button/) for css style of a pressed button with 3D effect using box-shadow.
 - [timonweb.com](https://timonweb.com/javascript/how-to-get-a-random-value-from-a-javascript-array/) for randomly generated computer's choice.
-- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) for default behavior of HTML attribute *type"submit"* and overwrite this with *type="button"* to script event handlers in JavaScript. See [Bugs](#resolved-bugs) for details of possible complications using each attribute. 
 - My friend Stephan Reich, Software Developer, for showing me a way to solve a bug using the standard JavaScript function *event.preventDefault();*. See [Bugs](#resolved-bugs) for details.
 
 ### Imagery

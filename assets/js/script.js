@@ -61,7 +61,7 @@ completedSection.style.display = "none";
 usernameForm.addEventListener("submit", function (event) {
   // Prevents the default submission of form before JavaScript can handle the username submission, while allowing submit button to be focusable using type="submit".
   event.preventDefault();
-  if (usernameInput.value.length > 10 || usernameInput.value.length < 1) {
+  if (usernameInput.value.trim().length > 10 || usernameInput.value.trim().length < 1) {
     alert("Please choose a username between 1 and 10 characters.");
     usernameInput.value = ""; // Clear form input field if username is invalid
     return false; // to prevent submission if username is invalid (less than one or more than 10 characters).
