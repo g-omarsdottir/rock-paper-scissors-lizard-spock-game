@@ -33,7 +33,13 @@ The game can also be played in person using hand gestures. The player's count to
 - [Project and Site Owner Goals](#project-and-site-owner-goals)
 - [User Experience](#user-experience)
 - [Design](#design)
+- [Color Scheme](#color-scheme)
+    - [Color Contrast Check](#color-contrast-check)
+    - [Fonts](#fonts)
+    - [Layout](#layout)
+    - [Wireframes](#wireframes)
 - [Features](#features)
+    - [Interactive Elements](#interactive-elements)
 - [Accessibility](#accessibility)
 - [Technology Used](#technology-used)
 - [Testing](#testing)
@@ -86,7 +92,12 @@ The game was designed for mobile devices with a minimum width of 320px first. Th
 
 ### Imagery
 
-The buttons to play the game display an image of the variable they represent.  
+- The buttons to play the game display an image of the variable they represent.  
+- The image of Spock is of a Spock figurine, not the actor playing Spock in the TV series or the film. This is to 
+    - emphesize Spock's signature hand gesture, 
+    - complement the cute image of the lizard and 
+    - to avoid any possible copyright issues with the Star Trek franchise.
+- The illustration of the game rules was created with Canva using Wikepedia's illustration as a guide.
 
 ### Color Scheme 
 - The following color palette displays the colors used for this website. The colors were detected from the lizard and the Spock image used as choice buttons background.
@@ -109,11 +120,18 @@ Testing results of color contrast checks for readability and web accessibility:
 
     ![Font color contrast report](/documentation/contrast-text.png)
 
-- Font color #060A39 on background color to start game ('Submit Username & Play Game'; 'Play Again'): #
+- Font color #060A39 on background color #D9EE3E of buttons to start game ('Submit Username & Play Game'; 'Play Again'):
 
     [Link to Coolors Color Contrast Checker Report](https://coolors.co/contrast-checker/060a39-d9ee3e)
 
     ![Button color contrast report](/documentation/contrast-button.png)
+
+- Font color #060A39 on background color ##F5F5F5 (Return home).
+    - The background color is deliberately dull to distinguish between Play Again.
+
+    [Coolors Contrast Checker Report](https://coolors.co/contrast-checker/060a39-f5f5f5)
+
+    ![Button color contrast report](/documentation/contrast-home.png)
 
 ### Fonts
 
@@ -201,46 +219,47 @@ The wireframes show designs for desktop and mobile devices. The website is respo
 
 ### General Features of Each Page
 
-1. Landing page
-- The landing page contains 
-    - A welcome message 
-    - Introduction of the game and its origin
-        <details>
-        <summary>Click for image</summary>
+#### Landing page
 
-        ![welcome message](/documentation/welcome.png)
-        </details>
-    - Instructions on how to play the game
-        <details>
-        <summary>Click for image</summary>
-        
-        ![instructions](/documentation/instructions.png)
-        </details>
-    - Game rules that establish the criteria for winning and the winner of each round.
-    - Illustration of rules.
-        <details>
-        <summary>Click for image</summary>
-        
-        ![game rules](/documentation/features-rules.png)
-        </details>
+The landing page contains 
+- A welcome message 
+- Introduction of the game and its origin
+    <details>
+    <summary>Click for image</summary>
 
-    - Input field for username (pseudonym of user's choice) to display on the scoreboard and in a personalized message after user has completed the game. After entering a username within the limit of 10 characters and clicking submit, the user it automatically forwarded to the game section.
-        <details>
-        <summary>Click for image</summary>
+    ![welcome message](/documentation/welcome.png)
+    </details>
+- Instructions on how to play the game
+    <details>
+    <summary>Click for image</summary>
+            
+    ![instructions](/documentation/instructions.png)
+    </details>
+- Game rules that establish the criteria for winning and the winner of each round.
+- Illustration of rules.
+    <details>
+    <summary>Click for image</summary>
         
-        ![choose username](/documentation/username-input.png)
-        </details>
+    ![game rules](/documentation/features-rules.png)
+    </details>
+
+- Input field for username (pseudonym of user's choice) to display on the scoreboard and in a personalized message after user has completed the game. After entering a username within the limit of 10 characters and clicking submit, the user it automatically forwarded to the game section.
+    <details>
+    <summary>Click for image</summary>
+        
+    ![choose username](/documentation/username-input.png)
+    </details>
 - The sections of the game are displayed alternately to user according to a logical flow of a game website and the other sections are visibly hidden.
-- A footer is not necessary.
+- A footer is not included, because deemed unnecessary.
 
-2. Game Section
+#### Game Section
+
 - This is the essence of the website, where user plays the game.
 - The user plays against the computer. The computer's choice is randomly generated.
 - Scoreboard displaying two fields for the user and the computer
     - The user's chosen username
     - current score
     - the choice each player made, in case the user forgets which buttons he or she pushed.
-
         <details>
         <summary>Click for image</summary>
         
@@ -262,7 +281,8 @@ The wireframes show designs for desktop and mobile devices. The website is respo
     </details> 
 - The game ends when one player, user or computer, has won 10 rounds, i.e. gained 10 score points.
 
-3. Game Completion Section
+#### Game Completion Section
+
 - Scoreboard displaying the end score of the user. The end score is not always the same, since the computer can win, too.
     <details>
     <summary>Click for image</summary>
@@ -299,7 +319,6 @@ The wireframes show designs for desktop and mobile devices. The website is respo
             
     ![Spock quote](/documentation/spock-quote.png.png)
     </details> 
-
 
 ### Features Left to Implement
 
@@ -477,7 +496,7 @@ To fork the repository:
 ## Credits
 
 - The content for this project was written by me, Gudrun Omarsdottir. 
-- The game design this expanded game was created by [Sam Kass with Karen Brylan](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock).
+- The game design (of this extended version) is by [Sam Kass with Karen Brylan](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock).
 
 ### Content
 
