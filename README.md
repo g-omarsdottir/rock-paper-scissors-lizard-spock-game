@@ -158,15 +158,28 @@ The wireframes show designs for desktop and mobile devices. The website is respo
 
 - Input element for username. The user cannot move forward to playing game without entering a username. 
 - The username must meet a criteria: consist of characters between one and 10
-    - If the user enters an invalid username, the user is informed
-        - Less than 1 character: alert 
+    - If the user enters an invalid username, the user is informed what to correct.
+        - Less than 1 character: alert
+            <details>
+            <summary>Click for image</summary>
+            
+            ![alert input-field](/documentation/alert-inputfield.png)
+            </details> 
 
-        ![alert input-field](/documentation/alert-inputfield.png)
-        - More than 10 characters: alert 
-        
-        ![alert invalid](/documentation/alert-invalid.png)
+        - More than 10 characters or only blank spaces: alert 
+            <details>
+            <summary>Click for image</summary>
+            
+            ![alert invalid](/documentation/alert-invalid.png)
+            </details> 
         - Input field is automatically cleared.
-- Buttons to choose which variable the user wants to play for each round.
+        - Buttons to choose which variable the user wants to play for each round.
+            <details>
+            <summary>Click for image</summary>
+            
+            ![choice buttons](/documentation/choice-buttons.png)
+            </details> 
+            
 - Button to return to game and play again. After completing the game, the user is presented with a return button to return to the game and play again and is automatically forwarded to the game section, skipping the landing page and having to enter a username.
 - Button to return to landing page and enter a new username.
 - All buttons have a pseudo-class for active and hover to give users feedback when a button is pushed.
@@ -174,19 +187,50 @@ The wireframes show designs for desktop and mobile devices. The website is respo
         - Slight change of background color.
         - Cursor is a pointer, i.e. a hand.
         - Choice buttons additionally get a thicker border and larger font size.
+            <details>
+            <summary>Click for image</summary>
+
+            ![hover effect button](/documentation/hover-button.png)
+            </details>
     - Active: a box-shadow for 3D effect when button is pushed.
+        <details>
+        <summary>Click for image</summary>
+
+        ![press effect button](/documentation/active-button.png)
+        </details>
 
 ### General Features of Each Page
 
-- Landing page
+1. Landing page
 - The landing page contains 
     - A welcome message 
     - Introduction of the game and its origin
+        <details>
+        <summary>Click for image</summary>
+
+        ![welcome message](/documentation/welcome.png)
+        </details>
     - Instructions on how to play the game
-    - Game rules that establish the criteria for winning and the victor of each round.
-    - Input field for username (pseudonym of user's choice) to display in a personalized message after user has completed the game. After entering a username within the limit of 10 characters and clicking submit, the user it automatically forwarded to the game section.
-- The username is store with JavaScript local storage to display in a personalized message after game completion.
-- The sections are displayed alternately to user according to a logical flow of a game website and the other sections are visibly hidden.
+        <details>
+        <summary>Click for image</summary>
+        
+        ![instructions](/documentation/instructions.png)
+        </details>
+    - Game rules that establish the criteria for winning and the winner of each round.
+    - Illustration of rules.
+        <details>
+        <summary>Click for image</summary>
+        
+        ![game rules](/documentation/features-rules.png)
+        </details>
+
+    - Input field for username (pseudonym of user's choice) to display on the scoreboard and in a personalized message after user has completed the game. After entering a username within the limit of 10 characters and clicking submit, the user it automatically forwarded to the game section.
+        <details>
+        <summary>Click for image</summary>
+        
+        ![choose username](/documentation/username-input.png)
+        </details>
+- The sections of the game are displayed alternately to user according to a logical flow of a game website and the other sections are visibly hidden.
 - A footer is not necessary.
 
 2. Game Section
@@ -195,18 +239,67 @@ The wireframes show designs for desktop and mobile devices. The website is respo
 - Scoreboard displaying two fields for the user and the computer
     - The user's chosen username
     - current score
-    - the choice each player made, in case the user forgets which buttons was pushed
+    - the choice each player made, in case the user forgets which buttons he or she pushed.
+
+        <details>
+        <summary>Click for image</summary>
+        
+        ![scoreboard](/documentation/scoreboard.png)
+        </details>
+
 - A field for game results announcing the winner of the round and explanation why the choice won referencing the rules.
+    <details>
+    <summary>Click for image</summary>
+
+    ![user feedback results](/documentation/feedback.png)
+    </details>
+
 - Game buttons with user choices (predefined variables introduced in the game rules) to play the game.
+    <details>
+    <summary>Click for image</summary>
+            
+    ![choice buttons](/documentation/choice-buttons.png)
+    </details> 
 - The game ends when one player, user or computer, has won 10 rounds, i.e. gained 10 score points.
 
 3. Game Completion Section
 - Scoreboard displaying the end score of the user. The end score is not always the same, since the computer can win, too.
+    <details>
+    <summary>Click for image</summary>
+            
+    ![choice buttons](/documentation/final-score.png)
+    </details> 
 - If user wins, a personalized message containing the username provided the landing page section to congratulate the user is displayed.
+    <details>
+    <summary>Click for image</summary>
+            
+    ![congratulations](/documentation/win.png)
+    </details> 
 - If user loses, a personalized message to console the user to try again is displayed.
+    <details>
+    <summary>Click for image</summary>
+            
+    ![consolation](/documentation/lose.png)
+    </details> 
 - Button to play the game again. The user returns directly to game section and skips the landing page for a better user experience. 
+    <details>
+    <summary>Click for image</summary>
+            
+    ![button play again](/documentation/button-again.png)
+    </details> 
 - Button to return to home, navigates to the landing page.
-- A famous quote from the character Spock showing his signature hand gesture.
+    <details>
+    <summary>Click for image</summary>
+            
+    ![button return home](/documentation/button-home.png)
+    </details> 
+- A famous quote from the character Spock depicting his signature hand gesture.
+    <details>
+    <summary>Click for image</summary>
+            
+    ![Spock quote](/documentation/spock-quote.png.png)
+    </details> 
+
 
 ### Features Left to Implement
 
